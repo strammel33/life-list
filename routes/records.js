@@ -8,6 +8,8 @@ const router = Router()
 router.get('/', isLoggedIn, recordsCtrl.index)
 //GET /records/new
 router.get('/new', isLoggedIn, recordsCtrl.new)
+//GET /records/:recordId
+router.get('/:recordId', isLoggedIn, recordsCtrl.show)
 //GET /records/:recordId/addbirds
 router.get('/:recordId/addbirds', isLoggedIn, recordsCtrl.addBirds)
 //POST /records

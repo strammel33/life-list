@@ -16,7 +16,7 @@
       <tbody>
         <% records.forEach((record) => { %>
         <tr>
-          <td><%= record.title %></td>
+          <td><a href="/records/<%= record._id %>"><%= record.title %></a></td>
           <td><%= record.date %></td>
         </tr>
         <% }) %>

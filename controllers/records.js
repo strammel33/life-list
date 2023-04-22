@@ -42,9 +42,14 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  console.log('route and controller')
+}
+
 export {
   newRecord as new,
   create,
   addBirds,
   index,
+  show,
 }
