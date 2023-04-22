@@ -9,8 +9,8 @@ function newRecord(req, res) {
 function create(req, res) {
   Record.create(req.body)
   .then (record => {
-    console.log('redirect to record to add birds')
-    res.redirect(`/redirect/${record._id}`)
+    console.log('redirect to add birds')
+    res.redirect(`/records/${record._id}/addbirds`)
   })
   .catch(err => {
     console.log(err)
@@ -18,7 +18,12 @@ function create(req, res) {
   })
 }
 
+function addBirds(req, res) {
+  res.render('birds/new')
+}
+
 export {
   newRecord as new,
   create,
+  addBirds,
 }
