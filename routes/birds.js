@@ -6,6 +6,8 @@ const router = Router()
 
 //GET /birds
 router.get('/', isLoggedIn, birdsCtrl.index)
+//GET /birds/:birdId
+router.get('/:birdId', isLoggedIn, birdsCtrl.show)
 //POST /birds/:recordId/add
 router.post('/:recordId/add', isLoggedIn, birdsCtrl.create)
 

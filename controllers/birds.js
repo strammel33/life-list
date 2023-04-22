@@ -44,7 +44,12 @@ function index(req, res) {
   })
 }
 
+function show(req, res) {
+  res.render('birds/show')
+}
+
 export{
   create,
   index,
+  show
 }

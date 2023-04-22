@@ -15,7 +15,7 @@
       <tbody>
         <% birds.forEach((bird) => { %>
         <tr>
-          <td><%= bird.name %></td>
+          <td><a href="/birds/<%= bird._id %>"><%= bird.name %></td>
         </tr>
         <% }) %>
       </tbody>
