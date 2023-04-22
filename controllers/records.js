@@ -19,7 +19,9 @@ function create(req, res) {
 }
 
 function addBirds(req, res) {
-  res.render('birds/new')
+  res.render('birds/new',{
+    title: 'Add Birds'
+  })
 }
 
 export {

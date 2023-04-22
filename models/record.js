@@ -7,7 +7,7 @@ const recordSchema = new Schema({
   description: {type: String, required: true},
   date: {type: Date, required: true},
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
-  birds: [{type: Schema.Types.ObjectId, ref: 'Bird'}]
+  birds: [{type: Schema.Types.ObjectId, ref: "Bird"}]
 }, {
   timestamps: true
 })
