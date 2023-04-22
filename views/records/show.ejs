@@ -1,0 +1,28 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/records/forms.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <div class="left">
+    <% if (user) { %>
+    <h2><%= title %></h2>
+    <h3><%= record.title %></h3>
+    <h4><%= record.date %></h4>
+    <p> <%= record.description %></p>
+    <% } else { %>
+      <h2>There's a fox in the henhouse!</h2>
+    <% } %>
+  </div>
+  <div class="right">
+    <h2>Birds Recorded</h2>
+    <ul>
+      <% record.birds.forEach((bird) => { %>
+      <li><a href="/birds/<%= bird._id %>"><%= bird.name %></a></li>
+      <% }) %>
+    </ul>
+</main>
+<section class="space">
+
+</section>
+
+<%- include('../partials/footer') %>

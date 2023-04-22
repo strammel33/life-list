@@ -43,8 +43,20 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  console.log('route and controller')
+  Record.findById(req.params.recordId)
+  .populate('birds')
+  .then(record => {
+    res.render('records/show', {
+      record,
+      title: 'Record Details'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/records')
+  })
 }
+
 
 export {
   newRecord as new,
