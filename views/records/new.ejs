@@ -1,0 +1,34 @@
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/records/forms.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <div class="left">
+    <h2><%= title %></h2>
+    <form id="new-form" action="/records" method="POST">
+      <label for="title-input">Title:</label>
+      <input type="text" name="title" id="title-input" autocomplete="off">
+      <label for="record-date">Date of Record (dd/mm/yyyy):</label>
+      <input type="date" name="date" id="record-date">
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" cols="30" rows="10" placeholder="Include as much relevant information as you like. 
+      For example: 2 mile loop through grassland and riparian habitat. 
+      Weather: 62 degrees and cloudy. 8:30 to 10:30am.
+      Or:
+      Driving on Main Street at 6:15pm, sunny."></textarea>
+      <button type="submit">Add Birds</button>
+    </form>
+  </div>
+  <div class="right">
+    <% if (user) { %>
+      <button>Add Birds</button>
+    <% } else { %>
+
+    <% } %>
+  </div>
+</main>
+<section class="space">
+
+</section>
+
+<%- include('../partials/footer') %>

@@ -54,18 +54,22 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  height: 11vh;
+  height: 8vh;
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: 65vh;
 }
 
 .left {
   width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .right {
@@ -75,7 +79,7 @@ main {
 }
 
 .space {
-  height: 11vh;
+  height: 9vh;
   background-color: white;
 }
 
