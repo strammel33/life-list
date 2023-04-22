@@ -6,6 +6,8 @@ const router = Router()
 
 //GET /records/new
 router.get('/new', isLoggedIn, recordsCtrl.new)
+//POST /records
+router.post('/', isLoggedIn, recordsCtrl.create)
 
 
 export {
