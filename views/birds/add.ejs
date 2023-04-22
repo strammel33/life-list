@@ -25,7 +25,11 @@
   </div>
   <div class="right">
     <h2>Birds Added:</h2>
-    <p></p>
+    <ul>
+      <% record.birds.forEach(bird => { %>
+        <li> <%= bird.name %> </li>
+      <% }) %>
+    </ul>
     <a href="/records">SUBMIT RECORD</a>
 </main>
 <section class="space">
