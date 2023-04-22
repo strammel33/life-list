@@ -28,8 +28,13 @@ function addBirds(req, res) {
   })
 }
 
+function index(req, res) {
+  res.render('records/index')
+}
+
 export {
   newRecord as new,
   create,
   addBirds,
+  index,
 }

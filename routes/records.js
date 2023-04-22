@@ -4,6 +4,8 @@ import * as recordsCtrl from '../controllers/records.js'
 
 const router = Router()
 
+//GET /records
+router.get('/', isLoggedIn, recordsCtrl.index)
 //GET /records/new
 router.get('/new', isLoggedIn, recordsCtrl.new)
 //GET /records/:recordId/addbirds
