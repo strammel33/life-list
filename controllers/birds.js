@@ -45,8 +45,20 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  res.render('birds/show')
+  Bird.findById(req.params.birdId)
+  .populate('collectedDuring')
+  .then(bird => {
+    res.render('birds/show', {
+      bird,
+      title: 'Bird Details'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/birds')
+  })
 }
+
 
 export{
   create,
