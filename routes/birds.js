@@ -4,7 +4,9 @@ import * as birdsCtrl from '../controllers/birds.js'
 
 const router = Router()
 
-//POST
+//GET /birds
+router.get('/', isLoggedIn, birdsCtrl.index)
+//POST /birds/:recordId/add
 router.post('/:recordId/add', isLoggedIn, birdsCtrl.create)
 
 export {

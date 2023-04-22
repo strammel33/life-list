@@ -30,6 +30,21 @@ function create(req, res) {
   })
 }
 
+function index(req, res) {
+  Bird.find({})
+  .then(birds => {
+    res.render('birds/index', {
+      birds,
+      title: 'Life List'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
 export{
   create,
+  index,
 }
