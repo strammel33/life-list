@@ -2,15 +2,19 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
-  <% if (user?.profile.avatar) { %>
-    <div>
-      <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-      />
-    </div>
-  <% } %>
+  <div class="left">
+    <h3>big bird picture</h3>
+  </div>
+  <div class="right">
+    <% if (user) { %>
+      <button>My Records</button>
+      <button>My Life List</button>
+      <button>Add Record</button>
+    <% } else { %>
+      <h2>LIFE LIST (noun):</h2>
+      <p>a record of all birds sighted and identified by a birder</p>
+    <% } %>
+  </div>
 </main>
 <section class="space">
 

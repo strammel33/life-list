@@ -24,7 +24,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  height: 10vh;
+  height: 9vh;
 }
 
 header > h1 {
@@ -41,6 +41,12 @@ header > h1 {
   width: 33vw;
 }
 
+#g_id_onload {
+  display: flex;
+  justify-content: flex-end;
+  width: 33vw;
+}
+
 nav {
   background-color: #f6f6f6;
   color: #1a1a1a;
@@ -48,19 +54,28 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  height: 12.5vh;
+  height: 11vh;
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 60vh;
+}
+
+.left {
+  width: 70vw;
+}
+
+.right {
+  width: 30vw;
+  display: flex;
   flex-direction: column;
-  height: 55vh;
 }
 
 .space {
-  height: 12.5vh;
+  height: 11vh;
   background-color: white;
 }
 
