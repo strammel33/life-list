@@ -12,7 +12,7 @@ const birdSchema = new Schema({
   timestamps: true,
 })
 
-const User = mongoose.model('Bird', userSchema)
+const Bird = mongoose.model('Bird', birdSchema)
 
 export {
   Bird

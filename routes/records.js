@@ -6,10 +6,11 @@ const router = Router()
 
 //GET /records/new
 router.get('/new', isLoggedIn, recordsCtrl.new)
-//GET /records/:recordId
+//GET /records/:recordId/addbirds
 router.get('/:recordId/addbirds', isLoggedIn, recordsCtrl.addBirds)
 //POST /records
 router.post('/', isLoggedIn, recordsCtrl.create)
+
 
 
 export {
