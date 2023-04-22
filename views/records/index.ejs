@@ -1,1 +1,37 @@
-<h1>all the records</h1>
+<%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/records/forms.css" />
+<%- include('../partials/nav') %>
+
+<main>
+  <div class="left">
+    <% if (user) { %>
+    <h2><%= title %></h2>
+    <table id="list">
+      <thead>
+        <tr>
+          <th>Record Title</th>
+          <th>Record Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% records.forEach((record) => { %>
+        <tr>
+          <td><%= record.title %></td>
+          <td><%= record.date %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    </form>
+    <% } else { %>
+      <h2>There's a fox in the henhouse!</h2>
+    <% } %>
+  </div>
+  <div class="right">
+    <h2>big beautiful bird</h2>
+</main>
+<section class="space">
+
+</section>
+
+<%- include('../partials/footer') %>

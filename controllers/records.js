@@ -29,7 +29,17 @@ function addBirds(req, res) {
 }
 
 function index(req, res) {
-  res.render('records/index')
+  Record.find({})
+  .then(records => {
+    res.render('records/index', {
+      records,
+      title: 'All Records'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 export {
