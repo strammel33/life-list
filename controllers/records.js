@@ -7,6 +7,9 @@ function newRecord(req, res) {
 }
 
 function create(req, res) {
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
   Record.create(req.body)
   .then (record => {
     console.log('redirect to add birds')
@@ -58,7 +61,24 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-  
+  const newRecord = new Record()
+  const dt = newRecord.date
+  const recordDate = dt.toISOString().slice(0,16)
+  for (let key in req.body) {
+    if (req.body[key] === '') delete req.body[key]
+  }
+  Record.findById(req.params.recordId)
+  .then(record => {
+    res.render('records/edit', {
+      record,
+      title: 'Edit Record',
+      recordDate,
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/records')
+  })
 }
 
 
