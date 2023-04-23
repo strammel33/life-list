@@ -7,6 +7,7 @@ function newRecord(req, res) {
 }
 
 function create(req, res) {
+  req.body.owner = req.user.profile._id
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
@@ -61,9 +62,6 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-  const newRecord = new Record()
-  const dt = newRecord.date
-  const recordDate = dt.toISOString().slice(0,16)
   for (let key in req.body) {
     if (req.body[key] === '') delete req.body[key]
   }
@@ -72,12 +70,31 @@ function edit(req, res) {
     res.render('records/edit', {
       record,
       title: 'Edit Record',
-      recordDate,
     })
   })
   .catch(err => {
     console.log(err)
-    res.redirect('/records')
+    res.redirect('/')
+  })
+}
+
+function update(req, res) {
+  console.log(req.params.recordId)
+  Record.findById(req.params.recordId)
+  .then(record => {
+    console.log(record)
+    if (record.owner.equals(req.user.profile._id)) {
+      record.updateOne(req.body)
+      .then(() => {
+        res.redirect(`/records/${record._id}`)
+      })
+    } else {
+      throw new Error('Not authorized')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 
@@ -89,4 +106,5 @@ export {
   index,
   show,
   edit,
+  update,
 }

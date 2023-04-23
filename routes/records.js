@@ -16,6 +16,8 @@ router.get('/:recordId/addbirds', isLoggedIn, recordsCtrl.addBirds)
 router.get('/:recordId/edit', isLoggedIn, recordsCtrl.edit)
 //POST /records
 router.post('/', isLoggedIn, recordsCtrl.create)
+//PUT /records/:recordId'
+router.put('/:recordId', recordsCtrl.update)
 
 
 
