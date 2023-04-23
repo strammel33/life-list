@@ -13,11 +13,11 @@
         </tr>
       </thead>
       <tbody>
-        <% birds.forEach((bird) => { %>
         <tr>
-          <td><a href="/birds/<%= bird._id %>"><%= bird.name %></td>
+          <% birds.forEach((bird) => { %>
+            <% console.log(bird) %>
+          <% }) %>
         </tr>
-        <% }) %>
       </tbody>
     </table>
     </form>

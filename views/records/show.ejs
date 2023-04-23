@@ -9,6 +9,9 @@
     <h3><%= record.title %></h3>
     <h4><%= record.date %></h4>
     <p> <%= record.description %></p>
+    <a href="/records/<%= record._id %>/edit">
+      <button>Edit Record</button>
+    </a>
     <% } else { %>
       <h2>There's a fox in the henhouse!</h2>
     <% } %>

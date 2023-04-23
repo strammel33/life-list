@@ -57,6 +57,10 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  
+}
+
 
 export {
   newRecord as new,
@@ -64,4 +68,5 @@ export {
   addBirds,
   index,
   show,
+  edit,
 }

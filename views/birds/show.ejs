@@ -5,15 +5,7 @@
 <main>
   <div class="left">
     <% if (user) { %>
-      <h2><%= title %></h2>
-      <h3>Name: <%= bird.name %></h3>
-      <h3>Number of Times Recorded: <%= bird.collectedDuring.length %></h3>
-      <h3>Instances:</h3>
-      <ul>
-        <% bird.collectedDuring.forEach((record) => { %>
-          <li><a href="/birds/<%= bird._id %>/records/<%= record._id %>"><%= record.title %></a></li>
-        <% }) %>
-      </ul>
+      
     <% } else { %>
       <h2>This is a no fly zone!</h2>
     <% } %>

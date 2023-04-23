@@ -7,7 +7,7 @@ const birdSchema = new Schema({
   count: {type: Number},
   behavior: {type: String},
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
-  collectedDuring: [{type: Schema.Types.ObjectId, ref: "Record"}]
+  collectedDuring: {type: Schema.Types.ObjectId, ref: "Record"}
 }, {
   timestamps: true,
 })
