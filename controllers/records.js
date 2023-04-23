@@ -98,6 +98,19 @@ function update(req, res) {
   })
 }
 
+function approveDelete(req, res) {
+  Record.findById(req.params.recordId)
+  .then(record => {
+    res.render('records/delete', {
+      record,
+      title: 'Delete'
+    })
+  })
+}
+
+function deleteRecord(req, res) {
+  
+}
 
 export {
   newRecord as new,
@@ -107,4 +120,6 @@ export {
   show,
   edit,
   update,
+  approveDelete,
+  recordDelete as delete,
 }

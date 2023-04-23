@@ -12,12 +12,16 @@ router.get('/new', isLoggedIn, recordsCtrl.new)
 router.get('/:recordId', isLoggedIn, recordsCtrl.show)
 //GET /records/:recordId/addbirds
 router.get('/:recordId/addbirds', isLoggedIn, recordsCtrl.addBirds)
+//GET /records/recordId/delete
+router.get('/:recordId/delete', isLoggedIn, recordsCtrl.approveDelete)
 //GET /records/:recordId/edit
 router.get('/:recordId/edit', isLoggedIn, recordsCtrl.edit)
 //POST /records
 router.post('/', isLoggedIn, recordsCtrl.create)
-//PUT /records/:recordId'
+//PUT /records/:recordId
 router.put('/:recordId', recordsCtrl.update)
+//DELETE /records/:recordId
+router.delete('/:recordId', isLoggedIn, tacosCtrl.delete)
 
 
 
