@@ -79,9 +79,13 @@ function show(req, res) {
   })
 }
 
+function detail(req, res) {
+  
+}
 
 export{
   create,
   index,
-  show
+  show,
+  detail
 }
