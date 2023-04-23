@@ -21,7 +21,7 @@ router.post('/', isLoggedIn, recordsCtrl.create)
 //PUT /records/:recordId
 router.put('/:recordId', recordsCtrl.update)
 //DELETE /records/:recordId
-router.delete('/:recordId', isLoggedIn, tacosCtrl.delete)
+router.delete('/:recordId', isLoggedIn, recordsCtrl.delete)
 
 
 

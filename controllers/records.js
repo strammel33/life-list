@@ -109,7 +109,21 @@ function approveDelete(req, res) {
 }
 
 function deleteRecord(req, res) {
-  
+  Record.findById(req.params.recordId)
+  .then(record => {
+    if (record.owner.equals(req.user.profile._id)) {
+      record.deleteOne()
+      .then(() => {
+        res.redirect('/records')
+      })
+    } else {
+      throw new Error ('Not Authorized')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/records')
+  })
 }
 
 export {
@@ -121,5 +135,5 @@ export {
   edit,
   update,
   approveDelete,
-  recordDelete as delete,
+  deleteRecord as delete,
 }
