@@ -8,8 +8,12 @@ const router = Router()
 router.get('/', isLoggedIn, birdsCtrl.index)
 //GET /birds/new
 router.get('/new', isLoggedIn, birdsCtrl.new)
+//GET birds/:birdId
+router.get('/:birdId', isLoggedIn, birdsCtrl.show)
 //POST /birds
 router.post('/', isLoggedIn, birdsCtrl.create)
+//POST /birds/:birdId/instances
+router.post('/:birdId/instances', isLoggedIn, birdsCtrl.addInstance)
 
 export {
   router

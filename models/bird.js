@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const instanceSchema = new Schema ({
   count: Number,
   behavior: String,
-  record: {type: Schema.Types.ObjectId, ref: "Record"}
+  date: String,
   }, {
     timestamps: true
 })
