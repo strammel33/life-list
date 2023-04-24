@@ -22,6 +22,8 @@ router.post('/:birdId/instances', isLoggedIn, birdsCtrl.addInstance)
 router.put('/:birdId', isLoggedIn, birdsCtrl.update)
 //DELETE /birds/:birdId
 router.delete('/:birdId', isLoggedIn, birdsCtrl.delete)
+//DELETE /birds/:birdId/instances/:instanceId
+router.delete('/:birdId/instances/:instanceId', birdsCtrl.deleteInstance)
 
 export {
   router

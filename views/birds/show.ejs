@@ -43,6 +43,7 @@
             <th>Date</th>
             <th>Count</th>
             <th>Behavior</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -51,6 +52,10 @@
               <td><%= instance.date %></td>
               <td><%= instance.count %></td>
               <td><%= instance.behavior %></td>
+              <td>
+                <form action="/birds/<%= bird._id %>/instances/<%= instance._id %>?_method=DELETE" method="POST">
+                  <button>X</button>
+                </form>
           <% }) %>
           </tr>
         </tbody>

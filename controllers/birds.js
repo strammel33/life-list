@@ -130,6 +130,25 @@ function deleteBird(req, res) {
   })
 }
 
+function deleteInstance(req, res) {
+  Bird.findById(req.params.birdId)
+  .then(bird => {
+    bird.instances.remove(req.params.instanceId)
+    bird.save()
+    .then(() => {
+      res.redirect(`/birds/${bird._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/birds')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/birds')
+  })
+}
+
 
 export {
   newBird as new,
@@ -141,5 +160,5 @@ export {
   update,
   approveDelete,
   deleteBird as delete,
-
+  deleteInstance,
 }
