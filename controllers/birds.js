@@ -98,6 +98,39 @@ function update(req, res) {
   })
 }
 
+function approveDelete(req, res) {
+  Bird.findById(req.params.birdId)
+  .then(bird=> {
+    res.render('birds/delete', {
+      bird,
+      title: 'Delete'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
+}
+
+function deleteBird(req, res) {
+  Bird.findById(req.params.birdId)
+  .then(bird => {
+    if (bird.owner.equals(req.user.profile._id)) {
+      bird.deleteOne()
+      .then(() => {
+        res.redirect('/birds')
+      })
+    } else {
+      throw new Error ('Not Authorized')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/birds')
+  })
+}
+
+
 export {
   newBird as new,
   index,
@@ -105,6 +138,8 @@ export {
   show,
   addInstance,
   edit,
-  update
+  update,
+  approveDelete,
+  deleteBird as delete,
 
 }

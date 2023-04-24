@@ -138,6 +138,10 @@ function approveDelete(req, res) {
       title: 'Delete'
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
+  })
 }
 
 function deleteRecord(req, res) {
