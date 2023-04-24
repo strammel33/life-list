@@ -25,7 +25,7 @@ function create(req, res) {
 function addBirds(req, res) {
   Record.findById(req.params.recordId)
   .then(record => {
-    res.render('birds/add', {
+    res.render('birds/new', {
       record: record,
       title: 'Add Birds'
     })

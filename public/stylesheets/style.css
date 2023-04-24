@@ -25,6 +25,7 @@ header {
   display: flex;
   align-items: center;
   height: 9vh;
+  padding: 2vmin;
 }
 
 header > h1 {
@@ -52,7 +53,7 @@ nav {
   color: #1a1a1a;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 10px;
   height: 8vh;
 }
@@ -88,6 +89,10 @@ footer {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+footer > a {
+  padding: 2vmin;
 }
 
 h1 {

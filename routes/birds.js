@@ -11,7 +11,7 @@ router.get('/:birdId', isLoggedIn, birdsCtrl.show)
 //GET /birds/:birdId/records/:recordId
 router.get('/:birdId/records/:recordId', isLoggedIn, birdsCtrl.detail)
 //POST /birds/:recordId/add
-router.post('/:recordId/add', isLoggedIn, birdsCtrl.create)
+router.post('/:recordId/new', isLoggedIn, birdsCtrl.create)
 
 export {
   router

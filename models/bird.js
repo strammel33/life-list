@@ -2,12 +2,18 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const instanceSchema = new Schema ({
+  count: Number,
+  behavior: String,
+  record: {type: Schema.Types.ObjectId, ref: "Record"}
+  }, {
+    timestamps: true
+})
+
 const birdSchema = new Schema({
   name: {type: String, required: true},
-  count: {type: Number},
-  behavior: {type: String},
   owner: {type: Schema.Types.ObjectId, ref: "Profile"},
-  collectedDuring: {type: Schema.Types.ObjectId, ref: "Record"}
+  instances: [instanceSchema],
 }, {
   timestamps: true,
 })

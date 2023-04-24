@@ -5,8 +5,11 @@
 <main>
   <div class="left">
     <% if (user) { %>
-    <h2><%= title %> to "<%= record.title %> Record"</h2>
-    <form id="new-form" action="/birds/<%= record._id %>/add" method="POST">
+    <h2><%= title %></h2>
+    <form id="new-form" action="/birds/<%= record._id %>/new" method="POST">
+      <label for="selected-record">Record:</label>
+      <select name="record" id="selected-record">
+        <option value="record-title"><%= record.title %></option></select>
       <label for="name-input">Name:</label>
       <input type="text" name="name" id="name-input" autocomplete="off">
       <label for="count">Count:</label>
