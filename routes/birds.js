@@ -10,10 +10,14 @@ router.get('/', isLoggedIn, birdsCtrl.index)
 router.get('/new', isLoggedIn, birdsCtrl.new)
 //GET birds/:birdId
 router.get('/:birdId', isLoggedIn, birdsCtrl.show)
+//GET birds/:birdId/edit
+router.get('/:birdId/edit', isLoggedIn, birdsCtrl.edit)
 //POST /birds
 router.post('/', isLoggedIn, birdsCtrl.create)
 //POST /birds/:birdId/instances
 router.post('/:birdId/instances', isLoggedIn, birdsCtrl.addInstance)
+//PUT /birds/:birdId
+router.put('/:birdId', isLoggedIn, birdsCtrl.update)
 
 export {
   router

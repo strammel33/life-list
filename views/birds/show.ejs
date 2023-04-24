@@ -6,6 +6,16 @@
   <div class="left">
     <h2><%= title %></h2>
     <h3><%= bird.name %></h3>
+    <% if (bird.owner.equals(user?.profile._id)) { %>
+      <form action="/birds/<%= bird._id %>/delete" method="GET">
+        <button class="btn" type="submit">Delete Bird</button>
+      </form>
+      <form action="/birds/<%= bird._id %>/edit" method="GET">
+        <button class="btn" type="submit">Edit Bird</button>
+      </form>
+    <% } else { %>
+      <h2>There's a fox in the henhouse!</h2>
+    <% } %>
     <% if (user) { %>
     <h3>Sightings</h3>
     <form 
