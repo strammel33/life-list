@@ -5,19 +5,20 @@
 <main>
   <div class="left">
     <% if (user) { %>
-    <h2><%= title %></h2>
-    <table id="list">
-      <thead>
-        Birds
-      </thead>
-      <tbody>
-        birds
-      </tbody>
-    </table>
-    </form>
-    <% } else { %>
-      <h2>There's a fox in the henhouse!</h2>
-    <% } %>
+      <h2><%= title %></h2>
+      <h4><a href="/birds/new">ADD NEW BIRD</a></h4>
+        <ul>
+          <% birds.forEach((bird) => { %>
+          <li>
+            <a href="/birdss/<%= bird._id %>"><%= bird.name %></a>
+          </li>
+          <% }) %>
+        </ul>
+      </table>
+      </form>
+      <% } else { %>
+        <h2>There's a fox in the henhouse!</h2>
+      <% } %>
   </div>
   <div class="right">
     <h2>big beautiful bird</h2>

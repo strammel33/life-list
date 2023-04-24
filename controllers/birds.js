@@ -14,13 +14,19 @@ function create(req, res) {
   .then (bird => {
     res.render('birds/index', {
       bird,
-      title: 'Add Details'
+      title: 'Life List'
     })
   })
 }
 
 function index(req, res){
-
+  Bird.find({})
+  .then(birds => {
+    res.render('birds/index', {
+      birds,
+      title: 'Life List'
+    })
+  })
 }
 
 export {
