@@ -5,35 +5,18 @@
 <main>
   <div class="left">
     <% if (user) { %>
-    <h2><%= title %></h2>
-    <form id="new-form" action="/birds/<%= record._id %>/new" method="POST">
-      <label for="selected-record">Record:</label>
-      <select name="record" id="selected-record">
-        <option value="record-title"><%= record.title %></option></select>
-      <label for="name-input">Name:</label>
-      <input type="text" name="name" id="name-input" autocomplete="off">
-      <label for="count">Count:</label>
-      <input type="number" name="count" id="count">
-      <label for="behavior">Behavior:</label>
-      <textarea name="behavior" id="behavior" cols="30" rows="10" placeholder="Include as many behavioral observations as you like. 
-      For example: Singing from a stump and fence post. Alternatively 
-      foraging on the ground by turning cover. Observed for 3 minutes.
-      Or:
-      Soaring"></textarea>
-      <button type="submit">Add Bird</button>
-    </form>
-    <% } else { %>
-      <h2>This is a no fly zone!</h2>
-    <% } %>
-  </div>
+      <h2><%= title %></h2>
+      <form id="new-form" action="/birds" method="POST">
+        <label for="name-input">Name of Bird:</label>
+        <input type="text" name="name" id="name-input" autocomplete="off">
+        <button type="submit">Add to Life List</button>
+      </form>
+      <% } else { %>
+        <h2>There's a fox in the henhouse!</h2>
+      <% } %>
+    </div>
   <div class="right">
-    <h2>Birds Added:</h2>
-    <ul>
-      <% record.birds.forEach(bird => { %>
-        <li> <%= bird.name %> </li>
-      <% }) %>
-    </ul>
-    <a href="/records">SUBMIT RECORD</a>
+    <h2>big beautiful bird</h2>
   </div>
 </main>
 <section class="space">

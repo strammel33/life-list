@@ -1,8 +1,9 @@
 import { Record } from '../models/record.js'
+import { Bird } from "../models/bird.js"
 
 function newRecord(req, res) {
   res.render('records/new', {
-    title: 'Add Record'
+    title: 'Create Record'
   })
 }
 
@@ -13,8 +14,7 @@ function create(req, res) {
   }
   Record.create(req.body)
   .then (record => {
-    console.log('redirect to add birds')
-    res.redirect(`/records/${record._id}/addbirds`)
+    res.redirect('/records')
   })
   .catch(err => {
     console.log(err)
@@ -28,6 +28,38 @@ function addBirds(req, res) {
     res.render('birds/new', {
       record: record,
       title: 'Add Birds'
+    })
+  })
+}
+
+function createBird(req, res) {
+  req.body.owner = req.user.profile._id
+  console.log(req.params.recordId)
+  Record.findById(req.params.recordId)
+  .then(record => {
+    console.log('record in create', record)
+    let name = req.body.name
+    Bird.findOne({name: name})
+    .then(bird => {
+      if (bird) {
+        bird.instances.push(req.body)
+        bird.save()
+        record.birds.push(bird)
+        record.save()
+        console.log('updated bird', bird)
+      } else (
+        Bird.create(req.body)
+        .then (bird => {
+          bird.instances.push(req.body)
+          bird.save()
+          console.log('new bird', bird)
+          record.birds.push(bird)
+          record.save()
+        })
+      )
+      .then(() => {
+        res.redirect('/birds')
+      })
     })
   })
 }
@@ -136,4 +168,5 @@ export {
   update,
   approveDelete,
   deleteRecord as delete,
+  createBird,
 }

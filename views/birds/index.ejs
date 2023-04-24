@@ -6,21 +6,12 @@
   <div class="left">
     <% if (user) { %>
     <h2><%= title %></h2>
-    <h4><a href="/records/new">CREATE A NEW RECORD</a></h4>
     <table id="list">
       <thead>
-        <tr>
-          <th>Record Title</th>
-          <th>Record Date</th>
-        </tr>
+        Birds
       </thead>
       <tbody>
-        <% records.forEach((record) => { %>
-        <tr>
-          <td><a href="/records/<%= record._id %>"><%= record.title %></a></td>
-          <td><%= record.date %></td>
-        </tr>
-        <% }) %>
+        birds
       </tbody>
     </table>
     </form>
