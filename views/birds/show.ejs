@@ -1,67 +1,67 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/records/forms.css" />
+
 <%- include('../partials/nav') %>
 
 <main>
+  <% if (user) { %>
   <div class="left">
-    <h2><%= title %></h2>
-    <h3><%= bird.name %></h3>
-    <% if (bird.owner.equals(user?.profile._id)) { %>
-      <form action="/birds/<%= bird._id %>/delete" method="GET">
-        <button class="btn" type="submit">Delete Bird</button>
+    <h2><%= bird.name %></h2>
+      <% if (bird.owner.equals(user?.profile._id)) { %>
+        <a href="/birds/<%= bird._id %>/edit">
+          <button class="btn">Edit Bird</button>
+        </a>
+        <a href="/birds/<%= bird._id %>/delete">
+          <button class="btn" type="submit">Delete Bird</button>
+        </a>
+      <% } else { %>
+        <h2>There's a fox in the henhouse!</h2>
+      <% } %>
+    <section>
+      <h3>Add Sightings</h3>
+      <form 
+        id="add-instance-form"
+        action="/birds/<%= bird._id %>/instances" 
+        method="POST"
+      >
+        <label for="instance-date">Date (dd/mm/yyyy):</label>
+        <input type="text" name="date" id="instance-date" autocomplete="off">
+        <label for="count">Count:</label>
+        <input type="number" name="count" id="count" autocomplete="off">
+        <label for="behavior">Behavior:</label>
+        <textarea name="behavior" id="behavior" cols="40" rows="8" placeholder="Include any cool or relevant behavioral observations."></textarea>
+        <button type="submit">Create Sighting</button>
       </form>
-      <form action="/birds/<%= bird._id %>/edit" method="GET">
-        <button class="btn" type="submit">Edit Bird</button>
-      </form>
-    <% } else { %>
-      <h2>There's a fox in the henhouse!</h2>
-    <% } %>
-    <% if (user) { %>
-    <h3>Sightings</h3>
-    <form 
-      id="add-instance-form"
-      action="/birds/<%= bird._id %>/instances" 
-      method="POST"
-    >
-      <label for="instance-date">Date (dd/mm/yyyy):</label>
-      <input type="text" name="date" id="instance-date" autocomplete="off">
-      <label for="count">Count:</label>
-      <input type="number" name="count" id="count" autocomplete="off">
-      <label for="behavior">Behavior:</label>
-      <textarea name="behavior" id="behavior" cols="30" rows="10" placeholder="Include any cool or relevant behavioral observations."></textarea>
-      <button type="submit">Create Sighting</button>
-    </form>
-    <% } else { %>
-      <h2>There's a fox in the henhouse!</h2>
-    <% } %>
+    </section> 
   </div>
   <div class="right">
-    <% if (bird.instances.length) { %>
-      <table>
-        <thead>
+  <% if (bird.instances.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Count</th>
+          <th>Behavior</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% bird.instances.forEach(function(instance) { %>
           <tr>
-            <th>Date</th>
-            <th>Count</th>
-            <th>Behavior</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% bird.instances.forEach(function(instance) { %>
-            <tr>
-              <td><%= instance.date %></td>
-              <td><%= instance.count %></td>
-              <td><%= instance.behavior %></td>
-              <td>
-                <form action="/birds/<%= bird._id %>/instances/<%= instance._id %>?_method=DELETE" method="POST">
-                  <button>X</button>
-                </form>
-          <% }) %>
-          </tr>
-        </tbody>
-      </table>
-    <% } %>
+            <td><%= instance.date %></td>
+            <td><%= instance.count %></td>
+            <td><%= instance.behavior %></td>
+            <td>
+              <form action="/birds/<%= bird._id %>/instances/<%= instance._id %>?_method=DELETE" method="POST">
+                <button>X</button>
+              </form>
+        <% }) %>
+        </tr>
+      </tbody>
+    </table>
+  <% } %>
   </div>
+  <% } %>
 </main>
 <section class="space">
 

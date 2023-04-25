@@ -9,16 +9,16 @@
     <h3><%= record.title %></h3>
     <h4><%= record.date %></h4>
     <p> <%= record.description %></p>
-    <% if (record.owner.equals(user?.profile._id)) { %>
-      <a href="/records/<%= record._id %>/edit">
-        <button class="btn">Edit this Record</button>
-      </a>
-      <form action="/records/<%= record._id %>/delete" method="GET">
-        <button class="btn" type="submit">Delete Record</button>
-      </form>
-    <% } %>
-    <% } else { %>
-      <h2>There's a fox in the henhouse!</h2>
+      <% if (record.owner.equals(user?.profile._id)) { %>
+        <a href="/records/<%= record._id %>/edit">
+          <button class="btn">Edit Record</button>
+        </a>
+        <a href="/records/<%= record._id %>/delete">
+          <button class="btn" type="submit">Delete Record</button>
+        </a>
+      <% } else { %>
+        <h2>There's a fox in the henhouse!</h2>
+      <% } %>
     <% } %>
   </div>
   <div class="right">
