@@ -148,8 +148,23 @@ function addToBirds(req, res) {
   })
 }
 
-function deleteBird(req, res) {
-  
+function removeBird(req, res) {
+  Record.findById(req.params.recordId)
+  .then(record => {
+    record.birds.remove(req.params.birdId)
+    record.save()
+    .then(() => {
+      res.redirect(`/records/${record._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/records')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/records')
+  })
 }
 
 export {
@@ -162,5 +177,5 @@ export {
   approveDelete,
   deleteRecord as delete,
   addToBirds,
-  deleteBird
+  removeBird
 }
