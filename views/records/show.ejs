@@ -22,7 +22,7 @@
     <% } %>
   </div>
   <div class="right">
-    <h2>Birds Recorded</h2>
+    <h2>Life List Species:</h2>
     <ul>
       <% record.birds.forEach((bird) => { %>
         <li>
@@ -30,6 +30,16 @@
         </li>
       <% }) %>
     </ul>
+    <section>
+      <form id="add-bird-to-record" action="/records/<%= record._id %>/birds" method="POST">
+        <select name="birdId">
+          <% birds.forEach(bird => { %>
+            <option value="<%= bird._id %>"><%= bird.name %></option>
+          <% }) %>
+        </select>
+        <button type="submit">Add to Record</button>
+      </form>
+    </section>
   </div>
 </main>
 <section class="space">

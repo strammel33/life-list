@@ -39,10 +39,19 @@ function index(req, res) {
 
 function show(req, res) {
   Record.findById(req.params.recordId)
+  .populate('birds')
   .then(record => {
-    res.render('records/show', {
-      record,
-      title: 'Record Details'
+    Bird.find({_id: {$nin: record.birds}})
+    .then(birds => {
+      res.render('records/show', {
+        record,
+        title: 'Record Details',
+        birds,
+      })
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/records')
     })
   })
   .catch(err => {
@@ -120,6 +129,10 @@ function deleteRecord(req, res) {
   })
 }
 
+function addToBirds(req, res) {
+  console.log('add birds to record')
+}
+
 export {
   newRecord as new,
   create,
@@ -129,4 +142,5 @@ export {
   update,
   approveDelete,
   deleteRecord as delete,
+  addToBirds
 }
