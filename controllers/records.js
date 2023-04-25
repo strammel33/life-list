@@ -130,7 +130,22 @@ function deleteRecord(req, res) {
 }
 
 function addToBirds(req, res) {
-  console.log('add birds to record')
+  Record.findById(req.params.recordId)
+  .then(record => {
+    record.birds.push(req.body.birdId)
+    record.save()
+    .then(() => {
+      res.redirect(`/records/${record._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/records')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/records')
+  })
 }
 
 export {
