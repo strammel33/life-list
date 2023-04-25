@@ -22,23 +22,33 @@
     <% } %>
   </div>
   <div class="right">
-    <h2>Life List Species:</h2>
+    <h2>Species Seen:</h2>
     <ul>
       <% record.birds.forEach((bird) => { %>
         <li>
-          <a href="/birds/<%= bird._id %>"><%= bird.name %></a>
+          <a href="/birds/<%= bird._id %>"><%= bird.name %></a> 
+          <% if (record.owner.equals(user?.profile._id)) { %>
+            - 
+            <form action="/records/<%= record._id %>/birds/<%= bird._id %>?_method=DELETE" method="POST">
+              <button type="submit">X</button>
+            </form>
+          <% } else { %>
+          <% } %>
         </li>
       <% }) %>
     </ul>
     <section>
-      <form id="add-bird-to-record" action="/records/<%= record._id %>/birds" method="POST">
-        <select name="birdId">
-          <% birds.forEach(bird => { %>
-            <option value="<%= bird._id %>"><%= bird.name %></option>
-          <% }) %>
-        </select>
-        <button type="submit">Add to Record</button>
-      </form>
+      <% if (record.owner.equals(user?.profile._id)) { %>
+        <form id="add-bird-to-record" action="/records/<%= record._id %>/birds" method="POST">
+          <select name="birdId">
+            <% birds.forEach(bird => { %>
+              <option value="<%= bird._id %>"><%= bird.name %></option>
+            <% }) %>
+          </select>
+          <button type="submit">Add to Record</button>
+        </form>
+      <% } else { %>
+      <% } %>
     </section>
   </div>
 </main>

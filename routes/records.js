@@ -23,6 +23,8 @@ router.post('/:recordId/birds', recordsCtrl.addToBirds)
 router.put('/:recordId', isLoggedIn, recordsCtrl.update)
 //DELETE /records/:recordId
 router.delete('/:recordId', isLoggedIn, recordsCtrl.delete)
+//DELETE /records/:recordId/birds/:birdId
+router.delete('/:recordId/birds/:birdId', isLoggedIn, recordsCtrl.deleteBird)
 
 
 

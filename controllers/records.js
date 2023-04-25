@@ -148,6 +148,10 @@ function addToBirds(req, res) {
   })
 }
 
+function deleteBird(req, res) {
+  
+}
+
 export {
   newRecord as new,
   create,
@@ -157,5 +161,6 @@ export {
   update,
   approveDelete,
   deleteRecord as delete,
-  addToBirds
+  addToBirds,
+  deleteBird
 }
