@@ -7,18 +7,16 @@
     <% if (user) { %>
       <h2><%= title %></h2>
       <h4><a href="/birds/new">ADD NEW BIRD</a></h4>
-        <ul>
-          <% birds.forEach((bird) => { %>
-          <li>
-            <a href="/birds/<%= bird._id %>"><%= bird.name %></a>
-          </li>
-          <% }) %>
-        </ul>
-      </table>
-      </form>
-      <% } else { %>
-        <h2>There's a fox in the henhouse!</h2>
-      <% } %>
+      <ul>
+        <% birds.forEach((bird) => { %>
+        <li>
+          <a href="/birds/<%= bird._id %>"><%= bird.name %></a>
+        </li>
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <h2>There's a fox in the henhouse!</h2>
+    <% } %>
   </div>
   <div class="right">
     <h2>big beautiful bird</h2>

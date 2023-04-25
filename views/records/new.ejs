@@ -5,20 +5,25 @@
 <main>
   <div class="left">
     <% if (user) { %>
-    <h2><%= title %></h2>
-    <form id="new-form" action="/records" method="POST">
-      <label for="title-input">Title:</label>
-      <input type="text" name="title" id="title-input" autocomplete="off">
-      <label for="record-date">Date of Record (dd/mm/yyyy):</label>
-      <input type="text" name="date" id="record-date" autocomplete="off">
-      <label for="description">Description:</label>
-      <textarea name="description" id="description" cols="30" rows="10" placeholder="Include as much relevant information as you like. 
-      For example: 2 mile loop through grassland and riparian habitat. 
-      Weather: 62 degrees and cloudy. 8:30 to 10:30am. I saw lots of sparrows and swallows, added Tree Swallow to my life list."></textarea>
-      <button type="submit">Create Record</button>
-    </form>
+      <h2><%= title %></h2>
+      <form id="new-form" action="/records" method="POST">
+        <label for="title-input">Title:</label>
+        <input type="text" name="title" id="title-input" autocomplete="off">
+        <label for="record-date">Date of Record (dd/mm/yyyy):</label>
+        <input type="text" name="date" id="record-date" autocomplete="off">
+        <label for="description">Description:</label>
+        <textarea 
+          name="description" 
+          id="description" 
+          cols="40" rows="8" 
+          placeholder="Include as much relevant information as you like. 
+            For example: 2 mile loop through grassland and riparian habitat. 
+            Weather: 62 degrees and cloudy. 8:30 to 10:30am. I saw lots of sparrows and swallows, added Tree Swallow to my life list."
+        ></textarea>
+        <button type="submit">Create Record</button>
+      </form>
     <% } else { %>
-      <h2>There's a fox in the henhouse!</h2>
+      <h2>This is unpheasant.</h2>
     <% } %>
   </div>
   <div class="right">

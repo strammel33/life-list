@@ -7,13 +7,13 @@
   <h1>LIFE LIST</h1>
   <div class="invisible"></div>
   <% if (user) { %>
-  <div class="profile">
-    <h2><%= user.profile.name %></h2>
-    <img
-        src="<%= user.profile.avatar %>"
-        alt="<%= user.profile.name %> avatar"
-    />
-  </div>
+    <div class="profile">
+      <h2><%= user.profile.name %></h2>
+      <img
+          src="<%= user.profile.avatar %>"
+          alt="<%= user.profile.name %> avatar"
+      />
+    </div>
   <% } else { %>
     <div 
       id="g_id_onload"

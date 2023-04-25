@@ -1,6 +1,4 @@
 import { Bird } from "../models/bird.js"
-import { Record } from "../models/record.js"
-
 
 function newBird(req, res) {
   res.render('birds/new', {
@@ -133,15 +131,15 @@ function deleteBird(req, res) {
 function deleteInstance(req, res) {
   Bird.findById(req.params.birdId)
   .then(bird => {
-    bird.instances.remove(req.params.instanceId)
-    bird.save()
-    .then(() => {
-      res.redirect(`/birds/${bird._id}`)
-    })
-    .catch(err => {
-      console.log(err)
-      res.redirect('/birds')
-    })
+    if (bird.owner.equals(req.user.profile._id)) {
+      bird.instances.remove(req.params.instanceId)
+      bird.save()
+      .then(() => {
+        res.redirect(`/birds/${bird._id}`)
+      })
+    } else {
+      throw new Error ('Not Authorized')
+    }
   })
   .catch(err => {
     console.log(err)

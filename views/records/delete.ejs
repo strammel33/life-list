@@ -14,15 +14,17 @@
           <button class="btn" type="submit">Delete Record</button>
         </form>
       <% } %>
-      <% } else { %>
-        <h2>There's a fox in the henhouse!</h2>
+    <% } else { %>
+      <h2>There's a fox in the henhouse!</h2>
     <% } %>
   </div>
   <div class="right">
     <h2>Birds Recorded</h2>
     <ul>
       <% record.birds.forEach((bird) => { %>
-      <li><a href="/birds/<%= bird._id %>"><%= bird.name %></a></li>
+        <li>
+          <a href="/birds/<%= bird._id %>"><%= bird.name %></a>
+        </li>
       <% }) %>
     </ul>
   </div>
