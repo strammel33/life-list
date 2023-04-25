@@ -5,14 +5,16 @@
 <main>
   <div class="left">
     <% if (user) { %>
-      <% let total = 0 %>
-      <% birds.forEach((bird) => { %>
-        <% total += 1 %>
-      <% }) %>
-      <h2><%= title %></h2>
-      <h3>Total: <%= total %> Birds</h3>
-      <h4><a href="/birds/new">ADD NEW BIRD</a></h4>
-      <ul>
+      <div class="title-info">
+        <% let total = 0 %>
+        <% birds.forEach((bird) => { %>
+          <% total += 1 %>
+        <% }) %>
+        <h2><%= title %></h2>
+        <h3>Total: <%= total %> Species</h3>
+        <h4><a href="/birds/new">ADD NEW BIRD</a></h4>
+      </div>
+      <ul class="bird-list">
         <% birds.forEach((bird) => { %>
           <li>
             <a href="/birds/<%= bird._id %>"><%= bird.name %></a>
