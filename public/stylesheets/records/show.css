@@ -27,7 +27,9 @@ h2 {
 }
 
 p {
+  max-height: 70%;
   max-width: 85%;
+  overflow: auto;
 }
 
 .right {
@@ -35,6 +37,15 @@ p {
   width: 35%;
   display: flex;
   flex-direction: column;
+  background-color: #f6f6f6;
+}
+
+.list {
+  height: 83%;
+  justify-content: flex-start;
+  background-color: #46830055;
+  margin: 2vmin 2vmin 0 2vmin;
+  overflow: auto;
 }
 
 ul {
@@ -56,38 +67,11 @@ li {
 }
 
 select {
-  height: 38px;
+  height: 48px;
   font-family: 'Roboto Slab', serif;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .button-59{
   margin: 2vmin;
-}
-
-#x-btn {
-  display: inline-block;
-  width: 2vw;
-  height: 3.5vh;
-  background-color: #f6f6f6;
-  border: 2px solid #040509;
-  font-family: 'Roboto Slab', serif;
-  font-size: 18px;
-}
-
-#x-btn:focus {
-  color: #040509;
-}
-
-#x-btn:hover {
-  border-color: #831a00;
-  color: #831a00;
-  fill: #831a00;
-  cursor: pointer;
-}
-
-#x-btn:active {
-  border-color: #831a00;
-  color: #831a00;
-  fill: #831a00;
 }
