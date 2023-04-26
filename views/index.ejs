@@ -1,9 +1,10 @@
 <%- include('./partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/index.css" />
 <%- include('./partials/nav') %>
 
 <main>
   <div class="left">
-    <h3>big bird picture</h3>
+    
   </div>
   <div class="right">
     <% if (user) { %>
@@ -11,8 +12,8 @@
       <a href="/birds"><button>My Life List</button></a>
       <a href="/records/new"><button>Add Record</button></a>
     <% } else { %>
-      <h2>LIFE LIST (noun):</h2>
-      <p>a record of all birds sighted and identified by a birder</p>
+      <h1>LIFE LIST (noun):</h1>
+      <h3>a record of all birds sighted and identified by a birder</h3>
     <% } %>
   </div>
 </main>

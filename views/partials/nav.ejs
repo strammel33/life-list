@@ -4,7 +4,7 @@
 </head>
 <body>
 <header>
-  <img src="../../public/images/crow.JPG" alt="crow on a tree">
+  <img src="/images/crow.JPG" alt="crow on a tree">
   <h1>LIFE LIST</h1>
   <div class="invisible"></div>
   <% if (user) { %>
@@ -16,21 +16,23 @@
       />
     </div>
   <% } else { %>
-    <div 
-      id="g_id_onload"
-      data-client_id="<%= googleClientID %>"
-      data-login_uri="/auth/google"
-      data-auto_prompt="false"
-    ></div>
-    <div 
-      class="g_id_signin"
-      data-type="standard"
-      data-size="large"
-      data-theme="filled_black"
-      data-text="sign_in_with"
-      data-shape="rectangular"
-      data-logo_alignment="left"
-    ></div>
+    <section class="user">
+      <div 
+        id="g_id_onload"
+        data-client_id="<%= googleClientID %>"
+        data-login_uri="/auth/google"
+        data-auto_prompt="false"
+      ></div>
+      <div 
+        class="g_id_signin"
+        data-type="standard"
+        data-size="large"
+        data-theme="filled_black"
+        data-text="sign_in_with"
+        data-shape="rectangular"
+        data-logo_alignment="left"
+      ></div>
+    </section>
   <% } %>%>
 </header>
 <nav>

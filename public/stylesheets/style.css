@@ -12,11 +12,10 @@ html {
 }
 
 body {
-  background-color: #8da6b4;
+  background-color: #63a2dd;
   color: #f6f6f6;
   /* Use a system font, if none are available use any found sans-sarif font */
-  font-family: system-ui, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 
-    'Helvetica Neue', sans-serif;
+  font-family: 'Roboto Slab', serif;
   margin: 0;
   overflow: hidden;
 }
@@ -25,7 +24,12 @@ header {
   display: flex;
   align-items: center;
   height: 9vh;
-  padding: 2vmin;
+}
+
+header > img {
+  width: 8vmin;
+  height: 8vmin;
+  margin: 0 .7vmin;
 }
 
 header > h1 {
@@ -36,11 +40,14 @@ header > h1 {
   width: 34vw;
 }
 
-.profile {
+.profile, .user {
   display: flex;
   justify-content: flex-end;
   width: 33vw;
+  margin: 0 .7vmin;
 }
+
+
 
 #g_id_onload {
   display: flex;
@@ -61,8 +68,8 @@ nav {
 main {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 65vh;
+  justify-content: space-between;
+  height: 66vh;
 }
 
 .left {
@@ -80,7 +87,7 @@ main {
 }
 
 .space {
-  height: 9vh;
+  height: 8vh;
   background-color: white;
 }
 
@@ -96,15 +103,15 @@ footer > a {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 38px;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 32px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 ul {
