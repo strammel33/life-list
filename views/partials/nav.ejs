@@ -37,10 +37,31 @@
 </header>
 <nav>
   <% if (user) { %>
-  <a href="/">HOME</a>
-  <a href="/records">MY BIRDING RECORDS</a>
-  <a href="/birds"> MY LIFE LIST</a>
-  <a href="/birds/new">NEW LIFE LIST ENTRY</a>
+  <a 
+    href="/" 
+    class=<%= title === 'Life List' ? 'active' : '' %>
+  >
+    HOME
+  </a>
+  <a 
+    href="/records"
+    class=<%= title === 'All Records' ? 'active' : '' %>
+  >
+    MY BIRDING RECORDS
+  </a>
+  <a 
+    href="/birds"
+    class=<%= title === 'My Life List' ? 'active' : '' %>
+  > 
+    MY LIFE LIST
+  </a>
+  <a 
+    href="/birds/new"
+    class=<%= title === 'New Life List Entry' ? 'active' : '' %>
+  >
+    NEW LIFE LIST ENTRY
+  </a>
   <% } else { %>
+    <h4>Fly into action! Log in to get started.</h4>
   <% } %>
 </nav>

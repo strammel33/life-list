@@ -46,7 +46,9 @@ header > h1 {
   align-items: center;
   width: 33vw;
   margin: 0;
-  height:fit-content;
+}
+.log-in {
+  margin: 0 2vmin;
 }
 
 .profile > img {
@@ -147,8 +149,22 @@ pre {
 nav > a {
   margin: 8px 24px;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.5vmin;
+}
+
+nav > a:visited {
+  color: #040509;
+}
+
+nav > a:hover {
+  color: #040509;
+  background-color: #46830055;
+}
+
+nav > a.active {
+  color: #468300;
 }

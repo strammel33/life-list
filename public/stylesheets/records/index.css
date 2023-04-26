@@ -1,13 +1,8 @@
 .left {
-  background-image: url(/images/puffin.jpeg);
-  object-fit: fill;
-  background-repeat: no-repeat;
   height: 100%;
   width: 60vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
 }
 
 p {
@@ -69,15 +64,15 @@ form {
 }
 
 .button-59:hover {
-  border-color: #468300;
-  color: #468300;
-  fill: #468300;
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
 }
 
 .button-59:active {
-  border-color: #468300;
-  color: #468300;
-  fill: #468300;
+  border-color: #06f;
+  color: #06f;
+  fill: #06f;
 }
 
 @media (min-width: 768px) {

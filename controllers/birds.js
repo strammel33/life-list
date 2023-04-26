@@ -23,7 +23,7 @@ function index(req, res){
   .then(birds => {
     res.render('birds/index', {
       birds,
-      title: 'Life List'
+      title: 'My Life List'
     })
   })
   .catch(err => {
