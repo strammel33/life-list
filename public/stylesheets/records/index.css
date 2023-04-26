@@ -3,6 +3,24 @@
   width: 60vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(ellipse at center, 
+  #a5c9eb, #63a2dd);
+
+}
+
+.right {
+  background-image: url(/images/weka.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  height: 100%;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 p {
@@ -13,71 +31,6 @@ p {
   padding: 0 1vmin;
 }
 
-.right {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(ellipse at center, 
-  #a5c9eb, #63a2dd);
-  width: 40vw;
-}
-
-.right > h3 {
-  margin: 0;
-}
-
 form {
   margin: 2vmin;
 }
-
-/* CSS */
-.button-59 {
-  align-items: center;
-  background-color: #f6f6f6;
-  border: 2px solid #040509;
-  box-sizing: border-box;
-  color: #040509;
-  cursor: pointer;
-  display: inline-flex;
-  fill: #040509;
-  font-family: 'Roboto Slab', serif;
-  font-size: 24px;
-  height: 48px;
-  justify-content: center;
-  letter-spacing: -.8px;
-  line-height: 24px;
-  min-width: 140px;
-  outline: 0;
-  padding: 0 17px;
-  text-align: center;
-  text-decoration: none;
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-59:focus {
-  color: #040509;
-}
-
-.button-59:hover {
-  border-color: #06f;
-  color: #06f;
-  fill: #06f;
-}
-
-.button-59:active {
-  border-color: #06f;
-  color: #06f;
-  fill: #06f;
-}
-
-@media (min-width: 768px) {
-  .button-59 {
-    min-width: 170px;
-  }
-}
-

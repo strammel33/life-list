@@ -1,13 +1,14 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/records/index.css" />
-<link rel="stylesheet" href="/stylesheets/records/forms.css" />
 <%- include('../partials/nav') %>
 
 <main>
   <div class="left">
     <% if (user) { %>
-      <h2><%= title %></h2>
-      <h4><a href="/records/new">CREATE A NEW RECORD</a></h4>
+      <h1><%= title %></h1>
+      <form action="/records/new" method="GET">
+        <input type="submit" value="ADD RECORD" role="button" class="button-59">
+      </form>
       <table id="list">
         <thead>
           <tr>
@@ -30,7 +31,7 @@
     <% } %>
   </div>
   <div class="right">
-    <h2>big beautiful bird</h2>
+    <p>Weka | <i>Gallirallus australis</i></p>
   </div>
 </main>
 <section class="space">

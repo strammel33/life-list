@@ -4,18 +4,15 @@
 
 <main>
   <div class="left">
-    <p>Atlantic Puffin <i>Fratercula Arctica</i></p>
+    <p>Atlantic Puffin | <i>Fratercula Arctica</i></p>
   </div>
   <div class="right">
     <% if (user) { %>
-      <form action="/records" method="GET">
-        <input type="submit" value="MY RECORDS" role="button" class="button-59">
-      </form>
       <form action="/records/new" method="GET">
         <input type="submit" value="ADD RECORD" role="button" class="button-59">
       </form>
-      <form action="/birds" method="GET">
-        <input type="submit" value="MY LIFE LIST" role="button" class="button-59">
+      <form action="/birds/new" method="GET">
+        <input type="submit" value="ADD BIRD" role="button" class="button-59">
       </form>
     <% } else { %>
       <h1>LIFE LIST (noun):</h1>

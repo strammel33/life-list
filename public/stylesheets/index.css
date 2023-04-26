@@ -33,56 +33,10 @@ p {
   margin: 0;
 }
 
-form {
+nav > h4 {
   margin: 2vmin;
 }
 
-/* CSS */
-.button-59 {
-  align-items: center;
-  background-color: #f6f6f6;
-  border: 2px solid #040509;
-  box-sizing: border-box;
-  color: #040509;
-  cursor: pointer;
-  display: inline-flex;
-  fill: #040509;
-  font-family: 'Roboto Slab', serif;
-  font-size: 24px;
-  height: 48px;
-  justify-content: center;
-  letter-spacing: -.8px;
-  line-height: 24px;
-  min-width: 140px;
-  outline: 0;
-  padding: 0 17px;
-  text-align: center;
-  text-decoration: none;
-  transition: all .3s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+form {
+  margin: 2vmin;
 }
-
-.button-59:focus {
-  color: #040509;
-}
-
-.button-59:hover {
-  border-color: #468300;
-  color: #468300;
-  fill: #468300;
-}
-
-.button-59:active {
-  border-color: #468300;
-  color: #468300;
-  fill: #468300;
-}
-
-@media (min-width: 768px) {
-  .button-59 {
-    min-width: 170px;
-  }
-}
-
