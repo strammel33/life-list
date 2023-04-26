@@ -5,27 +5,30 @@
 <main>
   <div class="left">
     <% if (user) { %>
-      <h1><%= title %></h1>
-      <form action="/records/new" method="GET">
-        <input type="submit" value="ADD RECORD" role="button" class="button-59">
-      </form>
-      <table id="list">
-        <thead>
-          <tr>
-            <th>Record Title</th>
-            <th>Record Date</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% records.forEach((record) => { %>
+      <section class="head">
+        <h1><%= title %></h1>
+        <form action="/records/new" method="GET">
+          <input type="submit" value="ADD RECORD" role="button" class="button-59">
+        </form>
+      </section>
+      <section class="table">
+        <table id="list">
+          <thead>
             <tr>
-              <td><a href="/records/<%= record._id %>"><%= record.title %></a></td>
-              <td><%= record.date %></td>
+              <th>Record Title</th>
+              <th>Record Date</th>
             </tr>
-          <% }) %>
-        </tbody>
-      </table>
-      </form>
+          </thead>
+          <tbody>
+            <% records.forEach((record) => { %>
+              <tr>
+                <td><a href="/records/<%= record._id %>"><%= record.title %></a></td>
+                <td><%= record.date %></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </section>
     <% } else { %>
       <h2>There's a fox in the henhouse!</h2>
     <% } %>

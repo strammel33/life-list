@@ -1,4 +1,4 @@
-/* form {
+form {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 352px));
@@ -16,4 +16,4 @@ form > button {
   width: 160px;
   margin-left: auto;
   font-size: 18px;
-} */
+}
