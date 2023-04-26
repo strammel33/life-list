@@ -20,18 +20,33 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 #list {
   width: 70%;
-  border-color: collapse;
+  height: 100%;
+  border-collapse: collapse;
+  padding: 0;
+
 }
 
 th {
   font-size: 28px;
   background-color: #f6f6f6;
 }
+
+/* th:first-child {
+  border-top: .3vmin solid #468300;
+  border-bottom: .3vmin solid #468300;
+  border-left: .3vmin solid #468300;
+}
+
+th:last-child {
+  border-top: .3vmin solid #468300;
+  border-bottom: .3vmin solid #468300;
+  border-right: .3vmin solid #468300;
+} */
 
 td {
   text-align: center;
