@@ -1,25 +1,30 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/records/forms.css" />
+<link rel="stylesheet" href="/stylesheets/records/delete.css" />
 <%- include('../partials/nav') %>
 
 <main>
   <div class="left">
     <% if (user) { %>
-      <h2>Are you sure you want to delete this record?</h2>
-      <h3><%= record.title %></h3>
-      <h4><%= record.date %></h4>
-      <p> <%= record.description %></p>
-      <% if (record.owner.equals(user?.profile._id)) { %>
-        <form action="/records/<%= record._id %>?_method=DELETE" method="POST">
-          <button class="btn" type="submit">Delete Record</button>
-        </form>
+      <section class="head">
+        <h2>Are you sure you want to delete this record?</h2>
+        <h2><%= record.title %> - <%= record.date %></h2>
+      </section>
+      <section class="paper">
+        <p> <%= record.description %></p>
+      </section>
+      <section class="buttons">
+        <% if (record.owner.equals(user?.profile._id)) { %>
+          <form action="/records/<%= record._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete Record" role="button" class="button-59">
+          </form>
+        <% } %>
+      <% } else { %>
+        <h2>There's a fox in the henhouse!</h2>
       <% } %>
-    <% } else { %>
-      <h2>There's a fox in the henhouse!</h2>
-    <% } %>
+      </section>
   </div>
   <div class="right">
-    big beautiful bird
+    <p class="caption">White-capped Albatross | <i>Thalassarche cauta steadi</i></p>
   </div>
 </main>
 <section class="space">
