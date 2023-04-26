@@ -1,5 +1,6 @@
 .left {
   height: 100%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -16,11 +17,6 @@ section {
   flex-direction: row;
 }
 
-.body {
-  height: 50%;
-  overflow-y: auto;
-}
-
 h1 {
   margin: 0;
 }
@@ -31,13 +27,14 @@ h2 {
 }
 
 p {
-  max-width: 70%;
+  max-width: 85%;
 }
 
 .right {
+  height: 100%;
+  width: 35%;
   display: flex;
   flex-direction: column;
-  
 }
 
 ul {
@@ -52,6 +49,16 @@ li {
   display: flex;
   justify-content: space-between;
   height: 5vh;
+}
+
+.add-birds{
+  margin-top: auto;
+}
+
+select {
+  height: 38px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
 }
 
 .button-59{
@@ -73,13 +80,14 @@ li {
 }
 
 #x-btn:hover {
-  border-color: #468300;
-  color: #468300;
-  fill: #468300;
+  border-color: #831a00;
+  color: #831a00;
+  fill: #831a00;
+  cursor: pointer;
 }
 
 #x-btn:active {
-  border-color: #468300;
-  color: #468300;
-  fill: #468300;
+  border-color: #831a00;
+  color: #831a00;
+  fill: #831a00;
 }

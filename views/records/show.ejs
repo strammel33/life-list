@@ -21,7 +21,7 @@
           <% } %>
         </section>
       </section>
-      <section class="body">
+      <section class="paper">
         <p> <%= record.description %></p>
       </section>
     <% } %>
@@ -34,7 +34,6 @@
           <li>
             <a href="/birds/<%= bird._id %>"><%= bird.name %></a> 
             <% if (record.owner.equals(user?.profile._id)) { %>
-              
               <form action="/records/<%= record._id %>/birds/<%= bird._id %>?_method=DELETE" method="POST">
                 <input type="submit" value="X" role="button" id="x-btn">
               </form>
