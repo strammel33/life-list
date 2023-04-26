@@ -1,19 +1,29 @@
 form {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 352px));
+  grid-template-columns: repeat(2, minmax(auto, 500px));
   font-size: 20px;
 }
 
 form * {
   padding: 5px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 26px;
 }
 
-form > button {
+form > input, form > textarea {
+  border: .3vmin solid #040509;
+}
+
+textarea {
+  height: 200px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 22px;
+}
+
+.button-59 {
   grid-column: span 2;
   width: 160px;
   margin-left: auto;
-  font-size: 18px;
+  font-size: 24px;
 }

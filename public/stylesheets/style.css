@@ -171,6 +171,10 @@ a {
   color: #05315a;
 }
 
+footer > form {
+  margin: 2vmin;
+}
+
 .button-59 {
   align-items: center;
   background-color: #f6f6f6;

@@ -1,11 +1,12 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/records/forms.css" />
+<link rel="stylesheet" href="/stylesheets/records/new.css" />
 <%- include('../partials/nav') %>
 
 <main>
   <div class="left">
     <% if (user) { %>
-      <h2><%= title %></h2>
+      <h1><%= title %></h1>
       <form id="new-form" action="/records" method="POST">
         <label for="title-input">Title:</label>
         <input type="text" name="title" id="title-input" autocomplete="off">
@@ -16,17 +17,16 @@
           name="description" 
           id="description" 
           cols="50" rows="5" 
-          placeholder="Include as much relevant information as you like. 
-          For example: 2 mile loop through grassland and riparian habitat. Weather: 62 degrees and cloudy. 8:30 to 10:30am. I saw lots of sparrows and swallows, added Tree Swallow to my life list."
+          placeholder="Include as much relevant information as you like. For example: 2 mile loop through grassland and riparian habitat. Weather: 62 degrees and cloudy. 8:30 to 10:30am. I saw lots of sparrows and swallows, added Tree Swallow to my life list."
         ></textarea>
-        <button type="submit">Create Record</button>
+        <input type="submit" value="Create Record" role="button" class="button-59">
       </form>
     <% } else { %>
       <h2>This is unpheasant.</h2>
     <% } %>
   </div>
   <div class="right">
-    <h2>big beautiful bird</h2>
+    <p class="caption">Burrowing Owl | <i>Athene cunicularia</i></p>
   </div>
 </main>
 <section class="space">
