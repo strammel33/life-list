@@ -1,6 +1,7 @@
 <footer>
   <% if (user) { %>
-    <a href="/auth/logout"><button>LOG OUT</button></a>
+    <form action="/auth/logout" method="GET">
+      <input type="submit" value="LOG OUT" role="button" class="button-59">
   <% } %>
 </footer>
 
