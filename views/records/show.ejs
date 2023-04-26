@@ -1,24 +1,29 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/records/forms.css" />
+<link rel="stylesheet" href="/stylesheets/records/show.css" />
 <%- include('../partials/nav') %>
 
 <main>
   <div class="left">
     <% if (user) { %>
-      <h2><%= title %></h2>
-      <h3><%= record.title %></h3>
-      <h4><%= record.date %></h4>
-      <p> <%= record.description %></p>
-      <% if (record.owner.equals(user?.profile._id)) { %>
-        <a href="/records/<%= record._id %>/edit">
-          <button class="btn">Edit Record</button>
-        </a>
-        <a href="/records/<%= record._id %>/delete">
-          <button class="btn" type="submit">Delete Record</button>
-        </a>
-      <% } else { %>
-        <h2>This is Ill-Eagle.</h2>
-      <% } %>
+      <section class="head">
+        <h1><%= title %></h1>
+        <h2><%= record.title %> - <%= record.date %></h2>
+        <section class="buttons">
+          <% if (record.owner.equals(user?.profile._id)) { %>
+            <form action="/records/<%= record._id %>/edit" method="GET">
+              <input type="submit" value="Edit Record" role="button" class="button-59">
+            </form>
+            <form action="/records/<%= record._id %>/delete" method="GET">
+              <input type="submit" value="Delete Record" role="button" class="button-59">
+            </form>
+            <% } else { %>
+              <h2>This is Ill-Eagle.</h2>
+          <% } %>
+        </section>
+      </section>
+      <section class="body">
+        <p> <%= record.description %></p>
+      </section>
     <% } %>
   </div>
   <div class="right">
@@ -45,7 +50,7 @@
               <option value="<%= bird._id %>"><%= bird.name %></option>
             <% }) %>
           </select>
-          <button type="submit">Add to Record</button>
+          <input type="submit" value="Add to Record" role="button" class="button-59">
         </form>
       <% } else { %>
       <% } %>

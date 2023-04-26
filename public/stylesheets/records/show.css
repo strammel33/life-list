@@ -1,0 +1,42 @@
+.left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  flex-direction: row;
+}
+
+.body {
+  height: 50%;
+  overflow-y: auto;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 2vmin;
+}
+
+p {
+  max-width: 70%;
+}
+
+.right {
+
+}
+
+form {
+  margin: 2vmin;
+}
