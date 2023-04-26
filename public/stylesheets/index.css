@@ -4,6 +4,18 @@
   background-repeat: no-repeat;
   height: 100%;
   width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+p {
+  margin: 0;
+  background-color: #040509;
+  color: #f6f6f6;
+  font-size: 22px;
+  padding: 0 1vmin;
 }
 
 .right {
@@ -28,15 +40,15 @@ form {
 /* CSS */
 .button-59 {
   align-items: center;
-  background-color: #fff;
-  border: 2px solid #000;
+  background-color: #f6f6f6;
+  border: 2px solid #040509;
   box-sizing: border-box;
-  color: #000;
+  color: #040509;
   cursor: pointer;
   display: inline-flex;
-  fill: #000;
+  fill: #040509;
   font-family: 'Roboto Slab', serif;
-  font-size: 20px;
+  font-size: 24px;
   height: 48px;
   justify-content: center;
   letter-spacing: -.8px;
@@ -53,7 +65,7 @@ form {
 }
 
 .button-59:focus {
-  color: #171e29;
+  color: #040509;
 }
 
 .button-59:hover {

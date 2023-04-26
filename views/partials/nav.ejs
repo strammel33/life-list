@@ -9,14 +9,14 @@
   <div class="invisible"></div>
   <% if (user) { %>
     <div class="profile">
-      <h2><%= user.profile.name %></h2>
+      <h4>Birder: <%= user.profile.name %></h4>
       <img
           src="<%= user.profile.avatar %>"
           alt="<%= user.profile.name %> avatar"
       />
     </div>
   <% } else { %>
-    <section class="user">
+    <section class="log-in">
       <div 
         id="g_id_onload"
         data-client_id="<%= googleClientID %>"
