@@ -27,6 +27,7 @@ h1 {
 
 h2 {
   margin: 2vmin;
+  text-align: center;
 }
 
 p {
@@ -34,9 +35,51 @@ p {
 }
 
 .right {
-
+  display: flex;
+  flex-direction: column;
+  
 }
 
-form {
+ul {
+  width: 80%;
+  text-align: center;
+  font-size: 22px;
+  display: inline-block;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+}
+
+.button-59{
   margin: 2vmin;
+}
+
+#x-btn {
+  display: inline-block;
+  width: 2vw;
+  height: 3.5vh;
+  background-color: #f6f6f6;
+  border: 2px solid #040509;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+}
+
+#x-btn:focus {
+  color: #040509;
+}
+
+#x-btn:hover {
+  border-color: #468300;
+  color: #468300;
+  fill: #468300;
+}
+
+#x-btn:active {
+  border-color: #468300;
+  color: #468300;
+  fill: #468300;
 }
