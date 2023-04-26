@@ -1,11 +1,13 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/records/forms.css" />
+<link rel="stylesheet" href="/stylesheets/records/new.css" />
+<link rel="stylesheet" href="/stylesheets/records/edit.css" />
 <%- include('../partials/nav') %>
 
 <main>
   <div class="left">
     <% if (user) { %>
-      <h2><%= title %></h2>
+      <h1><%= title %></h1>
       <form id="edit-form" action="/records/<%= record._id %>?_method=PUT" method="POST">
         <label for="title-input">Title:</label>
         <input type="text" name="title" id="title-input" autocomplete="off" value="<%= record.title %>">
@@ -13,13 +15,15 @@
         <input type="text" name="date" id="record-date" value="<%= record.date %>">
         <label for="description">Description:</label>
         <textarea name="description" id="description" cols="30" rows="10"><%= record.description %></textarea>
-        <button type="submit">Update Record</button>
+        <input type="submit" value="Update Record" role="button" class="button-59">
+          </form>
       </form>
     <% } else { %>
       <h2>Someone's run afowl.</h2>
     <% } %>
   </div>
   <div class="right">
+    <p class="caption">Anhinga | <i>Anhinga anhinga</i></p>
   </div>
 </main>
 <section class="space">
