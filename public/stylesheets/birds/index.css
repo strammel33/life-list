@@ -9,46 +9,41 @@
   #a5c9eb, #63a2dd);
 }
 
-h1 {
-  margin: 0;
-}
-
-.table {
-  width: 100%;
-  height: 60%;
-  display: flex;
+.title-info{
+  display:flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  overflow-y: auto;
 }
 
-#list {
-  width: 70%;
+h1 {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.list {
+  height: 60%;
+  width: 80%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  background-color: #46830055;
+}
+
+ul {
   height: 100%;
-  border-collapse: collapse;
-  padding: 0;
-}
-
-th {
-  font-size: 28px;
-  background-color: #f6f6f6;
-}
-
-td {
-  text-align: center;
   font-size: 24px;
-}
-
-tr {
-  background-color: #f6f6f676;
-}
-
-tr:hover {
-  background-color: #f6f6f6a4;
+  padding: 0;
+  text-align: center;
 }
 
 .right {
-  background-image: url(/images/weka.jpg);
+  /* background-image: url(/images/.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -58,16 +53,4 @@ tr:hover {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-}
-
-p {
-  margin: 0;
-  background-color: #040509;
-  color: #f6f6f6;
-  font-size: 22px;
-  padding: 0 1vmin;
-}
-
-form {
-  margin: 2vmin;
 }

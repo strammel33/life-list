@@ -1,5 +1,5 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/records/forms.css" />
+<link rel="stylesheet" href="/stylesheets/birds/index.css" />
 <%- include('../partials/nav') %>
 
 <main>
@@ -10,23 +10,25 @@
         <% birds.forEach((bird) => { %>
           <% total += 1 %>
         <% }) %>
-        <h2><%= title %></h2>
+        <h1><%= title %></h1>
         <h3>Total: <%= total %> Species</h3>
-        <h4><a href="/birds/new">ADD NEW BIRD</a></h4>
+        <input type="submit" value="Add New Bird" role="button" class="button-59">
       </div>
-      <ul class="bird-list">
-        <% birds.forEach((bird) => { %>
-          <li>
-            <a href="/birds/<%= bird._id %>"><%= bird.name %></a>
-          </li>
-        <% }) %>
-      </ul>
+      <section class="list">
+        <ul class="bird-list">
+          <% birds.forEach((bird) => { %>
+            <li>
+              <a href="/birds/<%= bird._id %>"><%= bird.name %></a>
+            </li>
+          <% }) %>
+        </ul>
+      </section>
     <% } else { %>
       <h2>There's a fox in the henhouse!</h2>
     <% } %>
   </div>
   <div class="right">
-    <h2>big beautiful bird</h2>  
+    <p class="caption"></p> 
   </div>
 </main>
 <section class="space">
