@@ -6,7 +6,7 @@
   <div class="left">
     <% if (user) { %>
       <section class="head">
-        <h1><%= record.title %> - <%= record.date %></h1>
+        <h2><%= record.title %> - <%= record.date %></h2>
         <section class="buttons">
           <% if (record.owner.equals(user?.profile._id)) { %>
             <form action="/records/<%= record._id %>/edit" method="GET">
@@ -27,7 +27,7 @@
   </div>
   <div class="right">
     <section class="list">
-      <h2>Species Seen:</h2>
+      <h3>Species Seen:</h3>
       <ul>
         <% record.birds.forEach((bird) => { %>
           <li>
@@ -50,7 +50,7 @@
               <option value="<%= bird._id %>"><%= bird.name %></option>
             <% }) %>
           </select>
-          <input type="submit" value="Add to Record" role="button" class="button-59">
+          <input type="submit" value="Add" role="button" class="button-59">
         </form>
       <% } else { %>
       <% } %>

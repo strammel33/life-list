@@ -23,7 +23,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  height: 9vh;
+  height: 10vh;
 }
 
 header > img {
@@ -70,14 +70,14 @@ nav {
   align-items: center;
   justify-content: flex-start;
   padding: 0 3vw 0 0;
-  height: 8vh;
+  height: 9vh;
 }
 
 main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 67vh;
+  height: 65vh;
 }
 
 .left {
@@ -182,14 +182,15 @@ footer > form {
 .button-59 {
   align-items: center;
   background-color: #f6f6f6;
-  border: .2vmin solid #040509;
+  border: .3vmin solid #040509;
+  border-radius: .3vmin;
   box-sizing: border-box;
   color: #040509;
   cursor: pointer;
   display: inline-flex;
   fill: #040509;
   font-family: 'Roboto Slab', serif;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   height: 6vmin;
   justify-content: center;
   letter-spacing: -.06vmin;
@@ -227,8 +228,9 @@ footer > form {
   height: 3.5vh;
   background-color: #f6f6f6;
   border: .2vmin solid #040509;
+  border-radius: .3vmin;
   font-family: 'Roboto Slab', serif;
-  font-size: 1.5em;
+  font-size: .5em;
 }
 
 #x-btn:focus {

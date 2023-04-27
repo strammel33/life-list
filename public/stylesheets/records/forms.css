@@ -8,7 +8,7 @@ form {
 form * {
   padding: .5vmin;
   border-radius: .5vmin;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 form > input, form > textarea {
@@ -17,11 +17,11 @@ form > input, form > textarea {
 
 input {
   font-family: 'Roboto Slab', serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 textarea {
-  height: 12.5rem;
+  height: 12rem;
   font-family: 'Roboto Slab', serif;
   font-size: 1.2rem;
 }

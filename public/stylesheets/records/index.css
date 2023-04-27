@@ -15,7 +15,7 @@
   align-items: center;
 }
 
-h1 {
+h2 {
   margin: 0;
 }
 
@@ -42,7 +42,7 @@ th {
 
 td {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 tr {
