@@ -1,12 +1,27 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/records/forms.css" />
-
+<link rel="stylesheet" href="/stylesheets/birds/show.css" />
 <%- include('../partials/nav') %>
 
 <main>
-  <% if (user) { %>
-    <div class="left">
-      <h2><%= bird.name %></h2>
+  <div class="left">
+    <% if (user) { %>
+      <section class="head">
+        <h1><%= bird.name %></h1>
+        <div class="buttons">
+          <% if (bird.owner.equals(user?.profile._id)) { %>
+            <form action="/birds/<%= bird._id %>/edit" method="GET" class="bird-btn">
+              <input type="submit" value="EDIT BIRD" role="button" class="button-59">
+            </form>
+            <form action="/birds/<%= bird._id %>/delete" method="GET" class="bird-btn">
+              <input type="submit" value="DELETE BIRD" role="button" class="button-59">
+            </form>
+          <% } else { %>
+            <h2>This is hawkward.</h2>
+          <% } %>
+        </div>
+      </section>
+      <section class="paper">
         <% if (bird.instances.length) { %>
           <table>
             <thead>
@@ -24,8 +39,12 @@
                   <td><%= instance.count %></td>
                   <td><%= instance.behavior %></td>
                   <td>
-                    <form action="/birds/<%= bird._id %>/instances/<%= instance._id %>?_method=DELETE" method="POST">
-                      <button>X</button>
+                    <% if (bird.owner.equals(user?.profile._id)) { %>
+                      <form action="/birds/<%= bird._id %>/instances/<%= instance._id %>?_method=DELETE" method="POST">
+                        <input type="submit" value="X" role="button" id="x-btn">
+                      </form>
+                    <% } else { %>
+                    <% } %>
                     </form>
                 </tr>
               <% }) %>
@@ -34,19 +53,7 @@
         <% } else { %>
           <h4>No Sightings Recorded</h4>
         <% } %>
-        <% if (bird.owner.equals(user?.profile._id)) { %>
-          <a href="/birds/<%= bird._id %>/edit">
-            <button class="btn">Edit Bird</button>
-          </a>
-          <a href="/birds/<%= bird._id %>/delete">
-            <button class="btn" type="submit">Delete Bird</button>
-          </a>
-        <% } else { %>
-          <h2>This is hawkward.</h2>
-        <% } %>
-        <a href="/birds">
-          <button class="btn" type="submit">Back to Life List</button>
-        </a>
+      </section>
     </div>
     <div class="right">
       <section>
@@ -69,11 +76,11 @@
             placeholder="Include any cool or relevant behavioral observations."
           >
           </textarea>
-          <button type="submit">Create Sighting</button>
+          <input type="submit" value="Create Sighting" role="button" class="button-59">
         </form>
       </section> 
-    </div>
-  <% } %>
+    <% } %>
+  </div>
 </main>
 <section class="space">
 

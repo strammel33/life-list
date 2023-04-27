@@ -1,0 +1,113 @@
+.left {
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: radial-gradient(ellipse at center, 
+  #a5c9eb, #63a2dd);
+}
+
+.head {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.bird-btn {
+  display: inline-block;
+  margin: 2vmin;
+}
+
+.paper {
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+table {
+  width: 85%;
+  height: 70%;
+  border-collapse: collapse;
+  overflow: auto;
+  margin-top: 1vmin;
+}
+
+th {
+  font-size: 28px;
+  background-color: #46830055;
+}
+
+td {
+  text-align: center;
+  font-size: 24px;
+  padding: 1vmin;
+}
+
+td > form {
+  width: 3vw;
+}
+
+tr {
+  background-color: #46830055;
+}
+
+tr:hover {
+  background-color: #4683003d;
+}
+
+
+.right {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+}
+
+.list {
+  height: 83%;
+  justify-content: flex-start;
+  background-color: #46830055;
+  margin: 2vmin 2vmin 0 2vmin;
+  overflow: auto;
+}
+
+ul {
+  width: 80%;
+  text-align: center;
+  font-size: 22px;
+  display: inline-block;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+}
+
+.add-birds{
+  margin-top: auto;
+}
+
+select {
+  height: 48px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  margin-left: 2vmin;
+}
