@@ -5,14 +5,14 @@
 <main>
   <div class="left">
     <% if (user) { %>
+      <h1><%= title %></h1>
       <div class="title-info">
         <% let total = 0 %>
         <% birds.forEach((bird) => { %>
           <% total += 1 %>
         <% }) %>
-        <h1><%= title %></h1>
         <h3>Total: <%= total %> Species</h3>
-        <input type="submit" value="Add New Bird" role="button" class="button-59">
+        <input type="submit" value="Add Bird" role="button" class="button-59">
       </div>
       <section class="list">
         <ul class="bird-list">
