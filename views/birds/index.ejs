@@ -5,7 +5,7 @@
 <main>
   <div class="left">
     <% if (user) { %>
-      <h1><%= title %></h1>
+      <h2><%= title %></h2>
       <div class="title-info">
         <% let total = 0 %>
         <% birds.forEach((bird) => { %>
@@ -13,7 +13,7 @@
         <% }) %>
         <h3>Total: <%= total %> Species</h3>
         <form action="/birds/new" method="GET">
-          <input type="submit" value="ADD BIRD" role="button" class="button-59">
+          <input type="submit" value="Add Bird" role="button" class="button-59">
         </form>
       </div>
       <section class="list">

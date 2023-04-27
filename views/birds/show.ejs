@@ -10,10 +10,10 @@
         <div class="buttons">
           <% if (bird.owner.equals(user?.profile._id)) { %>
             <form action="/birds/<%= bird._id %>/edit" method="GET" class="bird-btn">
-              <input type="submit" value="EDIT" role="button" class="button-59">
+              <input type="submit" value="Edit" role="button" class="button-59">
             </form>
             <form action="/birds/<%= bird._id %>/delete" method="GET" class="bird-btn">
-              <input type="submit" value="DELETE" role="button" class="button-59">
+              <input type="submit" value="Delete" role="button" class="button-59">
             </form>
           <% } else { %>
             <h2>This is hawkward.</h2>
@@ -56,7 +56,7 @@
     </div>
     <div class="right">
       <section class="sighting-form">
-        <h2>Add Sightings</h2>
+        <h3>Add Sightings</h3>
         <form 
           id="add-instance-form"
           action="/birds/<%= bird._id %>/instances" 
@@ -74,7 +74,7 @@
             rows="5" 
             placeholder="Include any cool or relevant behavioral observations."
           ></textarea>
-          <input type="submit" value="CREATE" role="button" class="button-59">
+          <input type="submit" value="Create" role="button" class="button-59">
         </form>
       </section> 
     <% } %>

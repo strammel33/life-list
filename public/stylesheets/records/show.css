@@ -73,3 +73,7 @@ select {
 .button-59{
   margin: 2vmin;
 }
+
+#add-btn {
+  width:fit-content;
+}

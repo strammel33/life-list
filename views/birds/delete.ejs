@@ -10,8 +10,8 @@
         <h2>Are you sure you want to delete this bird?</h2>
         <h2><%= bird.name %></h2>
         <section class="instructions">
-          <h4>To delete an individual sighting, navigate back to the bird's details and click the 'X' next to the sighting.</h4>
-          <h4>To remove this bird from a record, navigate to the record's details and click the 'X' next to the bird's name in species seen.</h4>
+          <h3>To delete an individual sighting, navigate back to the bird's details and click the 'X' next to the sighting.</h3>
+          <h3>To remove this bird from a record, navigate to the record's details and click the 'X' next to the bird's name in species seen.</h3>
         </section>
         <form action="/birds/<%= bird._id %>?_method=DELETE" method="POST">
           <input type="submit" value="Delete Bird" role="button" class="button-59">

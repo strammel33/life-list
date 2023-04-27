@@ -1,3 +1,7 @@
 .right {
   background-image: url(/images/anhinga.jpeg);
 }
+
+form {
+  padding: 3vmin;
+}
