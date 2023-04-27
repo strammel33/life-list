@@ -1,5 +1,5 @@
 .left {
-  background-image: url(/images/puffin.jpeg);
+  background-image: url(/images/puffin2.jpeg);
   object-fit: contain;
   background-repeat: no-repeat;
   height: 100%;
@@ -24,9 +24,10 @@
 .right > h3 {
   margin: 0;
   max-width: 80%;
+  text-align: center;
 }
 
-nav > h4 {
+nav > h3 {
   margin: 2vmin;
 }
 

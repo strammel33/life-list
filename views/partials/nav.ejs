@@ -9,7 +9,7 @@
   <div class="invisible"></div>
   <% if (user) { %>
     <div class="profile">
-      <h4>Birder: <%= user.profile.name %></h4>
+      <h3>Birder: <%= user.profile.name %></h3>
       <img
           src="<%= user.profile.avatar %>"
           alt="<%= user.profile.name %> avatar"
@@ -56,6 +56,6 @@
     MY LIFE LIST
   </a>
   <% } else { %>
-    <h4>Log in to get started.</h4>
+    <h3>Log in to get started.</h3>
   <% } %>
 </nav>
