@@ -15,6 +15,11 @@ form > input, form > textarea {
   border: .3vmin solid #040509;
 }
 
+input {
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+}
+
 textarea {
   height: 200px;
   font-family: 'Roboto Slab', serif;
