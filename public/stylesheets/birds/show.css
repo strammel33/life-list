@@ -50,7 +50,7 @@ table {
 }
 
 th {
-  font-size: 28px;
+  font-size: 1.75rem;
   position: sticky;
   top: 0;
   background-color: #8ab36d;
@@ -58,7 +58,7 @@ th {
 
 td {
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   padding: 2vmin;
 }
 
@@ -100,15 +100,15 @@ tr:hover {
 
 form {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 500px));
-  font-size: 20px;
+  grid-gap: 1vmin;
+  grid-template-columns: repeat(2, minmax(auto, 80vmin));
+  font-size: 1rem;
 }
 
 form * {
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 22px;
+  padding: .5vmin;
+  border-radius: .5vmin;
+  font-size: 1.5rem;
 }
 
 form > input, form > textarea {
@@ -116,9 +116,9 @@ form > input, form > textarea {
 }
 
 textarea {
-  height: 160px;
+  height: 10rem;
   font-family: 'Roboto Slab', serif;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 .button-59 {

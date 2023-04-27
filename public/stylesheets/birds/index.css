@@ -23,13 +23,13 @@ h1 {
 
 h3 {
   background-color: #f6f6f6;
-  border: 2px solid #040509;
-  padding: 12px 17px;
+  border: .2vmin solid #040509;
+  padding: 0 1.5vmin;
   margin: 0;  
-  font-size: 24px;
+  font-size: 1.5rem;
   justify-content: center;
-  letter-spacing: -.8px;
-  line-height: 24px;
+  letter-spacing: -.06vmin;
+  line-height: 3rem;
 }
 
 .list {
@@ -46,7 +46,7 @@ ul {
   overflow: auto;
   height: 100%;
   width: 90%;
-  font-size: 26px;
+  font-size: 1.5rem;
   padding: .5vmin;
   text-align: center;
   background-color: #46830055;

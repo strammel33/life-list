@@ -39,14 +39,6 @@ p {
   align-items: flex-end;
 }
 
-.caption {
-  margin: 0;
-  background-color: #040509;
-  color: #f6f6f6;
-  font-size: 22px;
-  padding: 0 1vmin;
-}
-
 form {
   margin: 2vmin;
 }

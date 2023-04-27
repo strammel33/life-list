@@ -9,7 +9,7 @@
 }
 
 h1 {
-  margin: 5vmin;
+  margin: 4vmin;
 }
 
 #new-form{
@@ -28,12 +28,4 @@ h1 {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-}
-
-.caption {
-  margin: 0;
-  background-color: #040509;
-  color: #f6f6f6;
-  font-size: 22px;
-  padding: 0 1vmin;
 }

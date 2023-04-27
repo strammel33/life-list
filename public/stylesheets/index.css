@@ -23,6 +23,7 @@
 
 .right > h3 {
   margin: 0;
+  max-width: 80%;
 }
 
 nav > h4 {
