@@ -6,7 +6,7 @@
   <div class="left">
     <% if (user) { %>
       <section class="head">
-        <h1><%= bird.name %></h1>
+        <h2><%= bird.name %></h2>
         <div class="buttons">
           <% if (bird.owner.equals(user?.profile._id)) { %>
             <form action="/birds/<%= bird._id %>/edit" method="GET" class="bird-btn">
