@@ -1,6 +1,6 @@
 .left {
   background-image: url(/images/puffin.jpeg);
-  object-fit: fill;
+  object-fit: contain;
   background-repeat: no-repeat;
   height: 100%;
   width: 60vw;
@@ -10,23 +10,15 @@
   align-items: flex-start;
 }
 
-p {
-  margin: 0;
-  background-color: #040509;
-  color: #f6f6f6;
-  font-size: 22px;
-  padding: 0 1vmin;
-}
-
 .right {
   height: 100%;
+  width: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background: radial-gradient(ellipse at center, 
   #a5c9eb, #63a2dd);
-  width: 40vw;
 }
 
 .right > h3 {
