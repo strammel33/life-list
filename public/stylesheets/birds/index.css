@@ -21,21 +21,10 @@ h2 {
   margin: 0;
 }
 
-/* .title-info > h3 {
-  background-color: #f6f6f6;
-  border: .2vmin solid #040509;
-  padding: 0 1.5vmin;
-  margin: 0;  
-  font-size: 1.5rem;
-  justify-content: center;
-  letter-spacing: -.06vmin;
-  line-height: 2.8rem;
-} */
-
 #add-bird-btn {
   border: .2vmin solid #040509;
-  width: 14vw;
-  height: 2.8rem;
+  width: 10vw;
+  height: 2.5rem;
   font-size: 1.5rem;
 }
 
