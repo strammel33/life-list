@@ -4,11 +4,14 @@
 
 Life List is an app for birders of all skill levels! Life List serves two purposes: to log birding events (called records) and to keep track of a birder's life list. A birder's life list all birds sighted and identified by the birder.
 
+![Home-Page](/public/images/landing-page.png)
 ***
-To use Life List, log in with a Google account and make your first life list bird entry! For every bird you add to your life list, you can return to it and add information about individual sightings. Then, make your first birding record. The records can be as brief or in-depth as the birder chooses - it's your record after all. Once you make your record you can associate birds from your life list with it so you chronicle what you saw that day.
+To use Life List, log in with a Google account and make your first life list bird entry! For every bird you add to your life list, you can return to it and add information about individual sightings. Then, make your first birding record. The records can be as brief or in-depth as the birder chooses - it's your record after all. Once you make your record you can associate birds from your life list with it to chronicle what you saw that day.
 
-
-![name of pic](url of pic)
+***
+### Planning Materials:
+* [Trello Board](https://trello.com/b/zV0bBVyO/life-list)
+* [Whimsical Board](https://whimsical.com/life-list-CxDrBtH6UADgwzk1WLdpxe)
 
 ***
 ### Technologies Used:
@@ -47,9 +50,11 @@ Life lists can take many iterations and scopes. It is not uncommon for a birder 
 Addtionally:
 * List search functionality
 * List sorting functionality (alphabetical, chronological, granularity)
-* User interction: friending other birders, seeing their lists, commenting on records
+* User interaction: friending other birders, seeing their lists, commenting on records
 * Users can add images to their records or sightings
+* Small screen functionality/responsiveness
+<br></br>
 ***
-### 💙 Dedications 💙
+### ⭐️ Dedications ⭐️
 * All of my ornithology professors and TAs
 * The American Redstart - my spark bird
