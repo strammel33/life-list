@@ -6,15 +6,15 @@
   <div class="left">
     <% if (user) { %>
       <section class="head">
-        <h1><%= title %></h1>
-        <h2><%= record.title %> - <%= record.date %></h2>
+        <h2><%= title %></h2>
+        <h1><%= record.title %> - <%= record.date %></h1>
         <section class="buttons">
           <% if (record.owner.equals(user?.profile._id)) { %>
             <form action="/records/<%= record._id %>/edit" method="GET">
-              <input type="submit" value="Edit Record" role="button" class="button-59">
+              <input type="submit" value="Edit" role="button" class="button-59">
             </form>
             <form action="/records/<%= record._id %>/delete" method="GET">
-              <input type="submit" value="Delete Record" role="button" class="button-59">
+              <input type="submit" value="Delete" role="button" class="button-59">
             </form>
             <% } else { %>
               <h2>This is Ill-Eagle.</h2>

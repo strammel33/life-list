@@ -107,7 +107,7 @@ footer {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 42px;
 }
 
 h2 {
@@ -173,6 +173,14 @@ a {
 
 footer > form {
   margin: 2vmin;
+}
+
+.caption {
+  margin: 0;
+  background-color: #040509;
+  color: #f6f6f6;
+  font-size: 22px;
+  padding: 0 1vmin;
 }
 
 .button-59 {
