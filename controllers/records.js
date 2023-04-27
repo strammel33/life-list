@@ -1,5 +1,6 @@
 import { Record } from '../models/record.js'
 import { Bird } from "../models/bird.js"
+import { Profile } from "../models/profile.js"
 
 
 function newRecord(req, res) {
@@ -24,11 +25,15 @@ function create(req, res) {
 }
 
 function index(req, res) {
-  Record.find({})
-  .then(records => {
-    res.render('records/index', {
-      records,
-      title: 'All Records'
+  Profile.find(req.user.profile._id)
+  .then(profile => {
+    Record.find({})
+    .then(records => {
+      res.render('records/index', {
+        profile,
+        records,
+        title: 'All Records'
+      })
     })
   })
   .catch(err => {

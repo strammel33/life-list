@@ -3,59 +3,54 @@
 <%- include('../partials/nav') %>
 
 <main>
-  <div class="left">
-    <% if (user) { %>
-      <section class="head">
-        <h2><%= record.title %> - <%= record.date %></h2>
-        <section class="buttons">
-          <% if (record.owner.equals(user?.profile._id)) { %>
-            <form action="/records/<%= record._id %>/edit" method="GET">
-              <input type="submit" value="Edit" role="button" class="button-59">
-            </form>
-            <form action="/records/<%= record._id %>/delete" method="GET">
-              <input type="submit" value="Delete" role="button" class="button-59">
-            </form>
-            <% } else { %>
-              <h2>This is Ill-Eagle.</h2>
-          <% } %>
-        </section>
-      </section>
-      <section class="paper">
-        <p> <%= record.description %></p>
-      </section>
-    <% } %>
-  </div>
-  <div class="right">
-    <section class="list">
-      <h3>Species Seen:</h3>
-      <ul>
-        <% record.birds.forEach((bird) => { %>
-          <li>
-            <a href="/birds/<%= bird._id %>"><%= bird.name %></a> 
-            <% if (record.owner.equals(user?.profile._id)) { %>
-              <form action="/records/<%= record._id %>/birds/<%= bird._id %>?_method=DELETE" method="POST">
-                <input type="submit" value="X" role="button" id="x-btn">
+  <% if (record.owner.equals(user?.profile._id)) { %>
+    <div class="left">
+        <section class="head">
+          <h2><%= record.title %> - <%= record.date %></h2>
+          <section class="buttons">
+              <form action="/records/<%= record._id %>/edit" method="GET">
+                <input type="submit" value="Edit" role="button" class="button-59">
               </form>
-            <% } else { %>
-            <% } %>
-          </li>
-        <% }) %>
-      </ul>
-    </section>
-    <section class="add-birds">
-      <% if (record.owner.equals(user?.profile._id)) { %>
-        <form id="add-bird-to-record" action="/records/<%= record._id %>/birds" method="POST">
-          <select name="birdId">
-            <% birds.forEach(bird => { %>
-              <option value="<%= bird._id %>"><%= bird.name %></option>
-            <% }) %>
-          </select>
-          <input type="submit" value="Add" role="button" class="button-59" id="add-btn">
-        </form>
-      <% } else { %>
-      <% } %>
-    </section>
-  </div>
+              <form action="/records/<%= record._id %>/delete" method="GET">
+                <input type="submit" value="Delete" role="button" class="button-59">
+              </form>
+          </section>
+        </section>
+        <section class="paper">
+          <p> <%= record.description %></p>
+        </section>
+    </div>
+    <div class="right">
+      <section class="list">
+        <h3>Species Seen:</h3>
+        <ul>
+          <% record.birds.forEach((bird) => { %>
+            <li>
+              <a href="/birds/<%= bird._id %>"><%= bird.name %></a> 
+                <form action="/records/<%= record._id %>/birds/<%= bird._id %>?_method=DELETE" method="POST">
+                  <input type="submit" value="X" role="button" id="x-btn">
+                </form>
+            </li>
+          <% }) %>
+        </ul>
+      </section>
+      <section class="add-birds">
+          <form id="add-bird-to-record" action="/records/<%= record._id %>/birds" method="POST">
+            <select name="birdId">
+              <% birds.forEach(bird => { %>
+                <% if (bird.owner.equals(user?.profile._id)) { %>
+                <option value="<%= bird._id %>"><%= bird.name %></option>
+                <% } else { %>
+                <% } %>
+              <% }) %>
+            </select>
+            <input type="submit" value="Add" role="button" class="button-59" id="add-btn">
+          </form>
+      </section>
+    </div>
+  <% } else { %>
+    <h2>This is Ill-Eagle.</h2>
+  <% } %>
 </main>
 <section class="space">
 

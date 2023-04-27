@@ -3,25 +3,22 @@
 <%- include('../partials/nav') %>
 
 <main>
+  <% if (bird.owner.equals(user?.profile._id)) { %>
   <div class="left">
-    <% if (user) { %>
-      <section class="head">
-        <h2><%= bird.name %></h2>
-        <div class="buttons">
-          <% if (bird.owner.equals(user?.profile._id)) { %>
-            <form action="/birds/<%= bird._id %>/edit" method="GET" class="bird-btn">
-              <input type="submit" value="Edit" role="button" class="button-59">
-            </form>
-            <form action="/birds/<%= bird._id %>/delete" method="GET" class="bird-btn">
-              <input type="submit" value="Delete" role="button" class="button-59">
-            </form>
-          <% } else { %>
-            <h2>This is hawkward.</h2>
-          <% } %>
-        </div>
-      </section>
-      <section class="paper">
-        <% if (bird.instances.length) { %>
+    <section class="head">
+      <h2><%= bird.name %></h2>
+      <div class="buttons">
+          <form action="/birds/<%= bird._id %>/edit" method="GET" class="bird-btn">
+            <input type="submit" value="Edit" role="button" class="button-59">
+          </form>
+          <form action="/birds/<%= bird._id %>/delete" method="GET" class="bird-btn">
+            <input type="submit" value="Delete" role="button" class="button-59">
+          </form>
+      </div>
+    </section>
+    <section class="paper">
+      <% if (bird.instances.length) { %>
+        <section class="instance-table">
           <table>
             <thead>
               <tr>
@@ -38,47 +35,47 @@
                   <td><%= instance.count %></td>
                   <td><%= instance.behavior %></td>
                   <td>
-                    <% if (bird.owner.equals(user?.profile._id)) { %>
                       <form action="/birds/<%= bird._id %>/instances/<%= instance._id %>?_method=DELETE" method="POST">
                         <input type="submit" value="X" role="button" id="x-btn">
                       </form>
-                    <% } else { %>
-                    <% } %>
-                    </form>
+                  </td>
                 </tr>
               <% }) %>
             </tbody>
           </table>
-        <% } else { %>
-          <h4>No Sightings Recorded</h4>
-        <% } %>
-      </section>
-    </div>
-    <div class="right">
-      <section class="sighting-form">
-        <h3>Add Sighting</h3>
-        <form 
-          id="add-instance-form"
-          action="/birds/<%= bird._id %>/instances" 
-          method="POST"
-        >
-          <label for="instance-date">Date:</label>
-          <input type="text" name="date" id="instance-date" autocomplete="off">
-          <label for="count">Count:</label>
-          <input type="number" name="count" id="count" autocomplete="off">
-          <label for="behavior">Behavior:</label>
-          <textarea 
-            name="behavior" 
-            id="behavior" 
-            cols="35" 
-            rows="5" 
-            placeholder="Include any cool or relevant behavioral observations."
-          ></textarea>
-          <input type="submit" value="Create" role="button" class="button-59">
-        </form>
-      </section> 
-    <% } %>
+        </section>
+      <% } else { %>
+        <h4>No Sightings Recorded</h4>
+      <% } %>
+    </section>
   </div>
+  <div class="right">
+    <section class="sighting-form">
+      <h3>Add Sighting</h3>
+      <form 
+        id="add-instance-form"
+        action="/birds/<%= bird._id %>/instances" 
+        method="POST"
+      >
+        <label for="instance-date">Date:</label>
+        <input type="text" name="date" id="instance-date" autocomplete="off">
+        <label for="count">Count:</label>
+        <input type="number" name="count" id="count" autocomplete="off">
+        <label for="behavior">Behavior:</label>
+        <textarea 
+          name="behavior" 
+          id="behavior" 
+          cols="35" 
+          rows="5" 
+          placeholder="Include any cool or relevant behavioral observations."
+        ></textarea>
+        <input type="submit" value="Create" role="button" class="button-59">
+      </form>
+    </section> 
+  </div>
+  <% } else { %>
+    <h2>This is hawkward.</h2>
+  <% } %>
 </main>
 <section class="space">
 

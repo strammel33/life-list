@@ -6,7 +6,7 @@
 
 <main>
   <div class="left">
-    <% if (user) { %>
+    <% if (bird.owner.equals(user?.profile._id)) { %>
       <h2><%= title %></h2>
       <form id="edit-form" action="/birds/<%= bird._id %>?_method=PUT" method="POST">
         <label for="name-input">Name of Bird:</label>

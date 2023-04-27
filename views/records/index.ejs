@@ -21,10 +21,13 @@
           </thead>
           <tbody>
             <% records.forEach((record) => { %>
-              <tr>
-                <td><a href="/records/<%= record._id %>"><%= record.title %></a></td>
-                <td><%= record.date %></td>
-              </tr>
+              <% if (record.owner.equals(user?.profile._id)) { %>
+                <tr>
+                  <td><a href="/records/<%= record._id %>"><%= record.title %></a></td>
+                  <td><%= record.date %></td>
+                </tr>
+              <% } else { %>
+              <% } %>
             <% }) %>
           </tbody>
         </table>

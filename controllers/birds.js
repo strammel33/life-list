@@ -1,4 +1,5 @@
 import { Bird } from "../models/bird.js"
+import {Profile} from '../models/profile.js'
 
 function newBird(req, res) {
   res.render('birds/new', {
@@ -19,11 +20,15 @@ function create(req, res) {
 }
 
 function index(req, res){
-  Bird.find({})
-  .then(birds => {
-    res.render('birds/index', {
-      birds,
-      title: 'My Life List'
+  Profile.findById(req.user.profile._id)
+  .then(profile => {
+    Bird.find({})
+    .then(birds => {
+      res.render('birds/index', {
+        profile,
+        birds,
+        title: 'My Life List'
+      })
     })
   })
   .catch(err => {
