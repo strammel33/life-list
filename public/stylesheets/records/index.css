@@ -6,7 +6,7 @@
   justify-content: space-evenly;
   align-items: center;
   background: radial-gradient(ellipse at center, 
-  #a5c9eb, #63a2dd);
+  #b5d1eb, #63a2dd);
 }
 
 .head {
@@ -37,7 +37,8 @@ h2 {
 
 th {
   font-size: 1.5rem;
-  background-color: #f6f6f6;
+  color: #f6f6f6;
+  background-color: #05315a;
 }
 
 td {
