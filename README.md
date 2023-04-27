@@ -2,11 +2,11 @@
 ## [Life List](https://life-list.fly.dev/)
 
 
-Life List is an app for birders of all skill levels! Life List serves two purposes: to log birding events (called records) and to keep track of a birder's life list. A birder's life list all birds sighted and identified by the birder.
+Life List is an app for birders of all skill levels! Life List serves two purposes: to log birding events (called records) and to keep track of a birder's life list. A birder's life list consists of all birds sighted and identified by the birder.
 
 ![Home-Page](/public/images/landing-page.png)
 ***
-To use Life List, log in with a Google account and make your first life list bird entry! For every bird you add to your life list, you can return to it and add information about individual sightings. Then, make your first birding record. The records can be as brief or in-depth as the birder chooses - it's your record after all. Once you make your record you can associate birds from your life list with it to chronicle what you saw that day.
+To use Life List, log in with a Google account and make your first life list bird entry! For every bird you add to your life list, you can return to it and add information about individual sightings. Then, make your first birding record. The records can be as brief or in-depth as the birder chooses - it's your record after all. Once you make your record you can associate birds from your life list to it to chronicle what you saw that day.
 
 ***
 ### Planning Materials:
