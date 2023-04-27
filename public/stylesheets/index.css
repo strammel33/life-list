@@ -1,6 +1,7 @@
 .left {
   background-image: url(/images/puffin.jpeg);
-  object-fit: cover;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100%;
   width: 60vw;

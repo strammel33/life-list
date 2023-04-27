@@ -43,7 +43,7 @@ p {
   height: 83%;
   justify-content: flex-start;
   background-color: 
-  #f6f6f6;
+  #f6f6f6a5;
   margin: 2vmin 2vmin 0 2vmin;
   overflow: auto;
 }
@@ -68,7 +68,7 @@ li {
 
 select {
   height: 5vmin;
-  width: 20vmin;
+  width: 25vmin;
   font-family: 'Roboto Slab', serif;
   font-size: 1.2rem;
   margin-left: 2vmin;

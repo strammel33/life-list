@@ -30,12 +30,13 @@ h2 {
   justify-content: center;
   letter-spacing: -.06vmin;
   line-height: 2.8rem;
-  width: 11vw;
+  width: 12vw;
 }
 
 #add-bird-btn {
   border: .2vmin solid #040509;
-  width: 11vw;
+  width: 12vw;
+  height: 2.8rem;
   font-size: 1.5rem;
 }
 

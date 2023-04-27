@@ -94,7 +94,7 @@ tr:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #f6f6f6a5;
   margin: 2vmin;
   padding: 1.5vmin;
 }
