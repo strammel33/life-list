@@ -21,7 +21,7 @@ h2 {
   margin: 0;
 }
 
-.title-info > h3 {
+/* .title-info > h3 {
   background-color: #f6f6f6;
   border: .2vmin solid #040509;
   padding: 0 1.5vmin;
@@ -30,8 +30,7 @@ h2 {
   justify-content: center;
   letter-spacing: -.06vmin;
   line-height: 2.8rem;
-  width: 14vw;
-}
+} */
 
 #add-bird-btn {
   border: .2vmin solid #040509;

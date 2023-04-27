@@ -193,7 +193,7 @@ footer > form {
   justify-content: center;
   letter-spacing: -.06vmin;
   line-height: 1.5rem;
-  min-width: 8vw;
+  min-width: 9vw;
   outline: 0;
   padding: 0 1.5vmin;
   text-align: center;
@@ -228,7 +228,7 @@ footer > form {
   border: .2vmin solid #040509;
   border-radius: .3vmin;
   font-family: 'Roboto Slab', serif;
-  font-size: .5em;
+  font-size: .7em;
 }
 
 #x-btn:focus {
