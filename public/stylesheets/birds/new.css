@@ -3,10 +3,18 @@
   width: 60vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   background: radial-gradient(ellipse at center, 
   #a5c9eb, #63a2dd);
+}
+
+h1 {
+  margin-bottom: 5vmin;
+}
+
+form {
+  width: 70%;
 }
 
 .right {

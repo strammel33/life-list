@@ -6,11 +6,11 @@
 <main>
   <div class="left">
     <% if (user) { %>
-      <h2><%= title %></h2>
+      <h1>Add Bird to Life List</h1>
       <form id="new-form" action="/birds" method="POST">
         <label for="name-input">Name of Bird:</label>
         <input type="text" name="name" id="name-input" autocomplete="off">
-        <button type="submit">Add to Life List</button>
+        <input type="submit" value="ADD BIRD" role="button" class="button-59">
       </form>
     <% } else { %>
       <h2>There's a fox in the henhouse!</h2>
