@@ -1,5 +1,4 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/records/forms.css" />
 <link rel="stylesheet" href="/stylesheets/birds/show.css" />
 <%- include('../partials/nav') %>
 
@@ -56,8 +55,8 @@
       </section>
     </div>
     <div class="right">
-      <section>
-        <h3>Add Sightings</h3>
+      <section class="sighting-form">
+        <h2>Add Sightings</h2>
         <form 
           id="add-instance-form"
           action="/birds/<%= bird._id %>/instances" 
@@ -74,8 +73,7 @@
             cols="35" 
             rows="5" 
             placeholder="Include any cool or relevant behavioral observations."
-          >
-          </textarea>
+          ></textarea>
           <input type="submit" value="Create Sighting" role="button" class="button-59">
         </form>
       </section> 

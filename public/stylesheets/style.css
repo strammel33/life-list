@@ -111,11 +111,11 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  font-size: 38px;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 h4 {
@@ -123,7 +123,7 @@ h4 {
 }
 
 p {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 ul {
@@ -169,6 +169,7 @@ nav > a.active {
 
 a {
   color: #05315a;
+  font-size: 24px;
 }
 
 footer > form {

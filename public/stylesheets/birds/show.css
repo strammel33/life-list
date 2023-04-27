@@ -32,6 +32,7 @@ h1 {
 
 .paper {
   height: 65%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -55,11 +56,16 @@ th {
 td {
   text-align: center;
   font-size: 24px;
-  padding: 1vmin;
+  padding: 2vmin;
 }
 
 td > form {
-  width: 3vw;
+  width: 2vw;
+  height: 3vh;
+}
+
+#x-btn {
+  padding: 0;
 }
 
 tr {
@@ -70,7 +76,6 @@ tr:hover {
   background-color: #4683003d;
 }
 
-
 .right {
   height: 100%;
   width: 35%;
@@ -79,35 +84,43 @@ tr:hover {
   background-color: #f6f6f6;
 }
 
-.list {
-  height: 83%;
-  justify-content: flex-start;
-  background-color: #46830055;
-  margin: 2vmin 2vmin 0 2vmin;
-  overflow: auto;
-}
-
-ul {
-  width: 80%;
-  text-align: center;
-  font-size: 22px;
-  display: inline-block;
-  padding: 0;
-}
-
-li {
+.sighting-form {
+  height: 100%;
   display: flex;
-  justify-content: space-between;
-  height: 5vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #46830055;
+  margin: 2vmin;
+  padding: 1vmin;
 }
 
-.add-birds{
-  margin-top: auto;
+form {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(2, minmax(auto, 500px));
+  font-size: 20px;
 }
 
-select {
-  height: 48px;
+form * {
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+form > input, form > textarea {
+  border: .3vmin solid #040509;
+}
+
+textarea {
+  height: 160px;
   font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+}
+
+.button-59 {
+  grid-column: span 2;
+  width: 160px;
+  margin-left: auto;
   font-size: 24px;
-  margin-left: 2vmin;
 }

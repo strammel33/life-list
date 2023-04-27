@@ -6,7 +6,6 @@
   <div class="left">
     <% if (user) { %>
       <section class="head">
-        <h2><%= title %></h2>
         <h1><%= record.title %> - <%= record.date %></h1>
         <section class="buttons">
           <% if (record.owner.equals(user?.profile._id)) { %>
