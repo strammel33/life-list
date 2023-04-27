@@ -116,6 +116,10 @@ form > input, form > textarea {
   border: .3vmin solid #040509;
 }
 
+#instance-date{
+  height: 3vmin;
+}
+
 textarea {
   height: 10rem;
   font-family: 'Roboto Slab', serif;

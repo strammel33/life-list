@@ -27,6 +27,7 @@ p {
   max-height: 70%;
   max-width: 85%;
   overflow: auto;
+  text-align: justify;
 }
 
 .right {
@@ -75,5 +76,5 @@ select {
 }
 
 #add-btn {
-  width:fit-content;
+  width:8vmin;
 }
