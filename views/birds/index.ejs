@@ -5,20 +5,19 @@
 <main>
   <div class="left">
     <% if (user) { %>
-    <h2><%= title %></h2>
-    <div class="title-info">
+      <h2><%= title %></h2>
       <% let total = 0 %>
+      <div class="title-info">
       <% birds.forEach((bird) => { %>
         <% if (bird.owner.equals(user?.profile._id)) { %>
           <% total += 1 %>
           <% } else { %>
-            <% total = 0 %>
           <% } %>
-        <% }) %>
-        <h3>Total: <%= total %> Species</h3>
-        <form action="/birds/new" method="GET">
-          <input type="submit" value="Add Bird" role="button" class="button-59" id="add-bird-btn">
-        </form>
+          <% }) %>
+      <h3>Total: <%= total %> Species</h3>
+      <form action="/birds/new" method="GET">
+        <input type="submit" value="Add Bird" role="button" class="button-59" id="add-bird-btn">
+      </form>
       </div>
       <section class="list">
         <ul class="bird-list">
