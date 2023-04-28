@@ -20,7 +20,8 @@ To use Life List, log in with a Google account and make your first life list bir
 * HTML
 * CSS
 * Git
-* MEN stack
+* MEN stack - Mongoose, MongoDB, Express, Node.js
+* Google OAuth
 * Fly.io
 
 ***
