@@ -11,9 +11,6 @@ function newRecord(req, res) {
 
 function create(req, res) {
   req.body.owner = req.user.profile._id
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   Record.create(req.body)
   .then(record => {
     res.redirect('/records')
@@ -66,9 +63,6 @@ function show(req, res) {
 }
 
 function edit(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   Record.findById(req.params.recordId)
   .then(record => {
     res.render('records/edit', {
@@ -83,10 +77,8 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-  console.log(req.params.recordId)
   Record.findById(req.params.recordId)
   .then(record => {
-    console.log(record)
     if (record.owner.equals(req.user.profile._id)) {
       record.updateOne(req.body)
       .then(() => {

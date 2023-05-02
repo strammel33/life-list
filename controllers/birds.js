@@ -67,9 +67,6 @@ function addInstance(req, res) {
 }
 
 function edit(req, res) {
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key]
-  }
   Bird.findById(req.params.birdId)
   .then(bird => {
     res.render('birds/edit', {
